@@ -10,7 +10,7 @@
 
         </header><!-- .entry-header -->
 
-        <section class="entry-content">
+        <section class="article-content">
 
             <p>Lo sentimos, pero todavía no hay ninguna entrada relativa a lo que busca.</p>
 
