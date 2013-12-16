@@ -1,6 +1,6 @@
 <?php if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
 
-<header class="entry-header">
+<header class="post-header entry-header">
 
 	<?php if ( is_single() ) : ?>
 		<h1 class="post-title entry-title"><?php the_title(); ?></h1>
