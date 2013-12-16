@@ -8,6 +8,19 @@ if( !function_exists('wp') && !empty($_SERVER['SCRIPT_FILENAME']) && basename(__
 <?php get_header(); ?>
 
 
-Index!
+    <section id="primary" role="main">
+
+        <?php if( have_posts() ) : ?>
+
+            <?php get_template_part( 'loop' ); ?>
+
+        <?php else : ?>
+
+            <?php get_template_part( 'loop', 'empty' ); ?>
+
+        <?php endif; ?>
+
+
+    </section>
 
 <?php get_footer(); ?>
