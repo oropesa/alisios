@@ -7,7 +7,6 @@ if( !function_exists('wp') && !empty($_SERVER['SCRIPT_FILENAME']) && basename(__
 
 <?php get_header(); ?>
 
-
     <section id="primary" role="main">
 
         <?php if( have_posts() ) : ?>
@@ -19,7 +18,6 @@ if( !function_exists('wp') && !empty($_SERVER['SCRIPT_FILENAME']) && basename(__
             <?php get_template_part( 'loop', 'empty' ); ?>
 
         <?php endif; ?>
-
 
     </section>
 

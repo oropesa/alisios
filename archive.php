@@ -2,7 +2,6 @@
 
 <?php get_header(); ?>
 
-
     <section id="primary" role="main">
 
         <?php if( have_posts() ) : ?>
