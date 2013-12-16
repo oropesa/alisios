@@ -5,4 +5,4 @@ Alisios is a free Wordpress Theme
 
 # Features
 
-Nothing yet.
+Alisios can be activated as a WP theme.
