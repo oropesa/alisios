@@ -8,10 +8,6 @@
 
             <?php get_template_part( 'loop' ); ?>
 
-        <?php else : ?>
-
-            <?php get_template_part( 'loop', 'empty' ); ?>
-
         <?php endif; ?>
 
     </section>
