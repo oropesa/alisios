@@ -1,10 +1,14 @@
 # Alisios changelog
 
-## 16.12.2013 - 0.1.3
+## 19.12.2013 - 0.1.4
+* Add sidebar, search and searchform templates
+* Add functions structure
+
+## 18.12.2013 - 0.1.3
 * Add loop, loop-empty, content and content-page templates
 * Update basic templates, which call loop
 
-## 16.12.2013 - 0.1.2
+## 17.12.2013 - 0.1.2
 * Add header and footer
 * Add 404, single, page and archive
 * header and footer are called by index, 404, single, page and archive
