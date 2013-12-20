@@ -1,5 +1,8 @@
 # Alisios changelog
 
+## 20.12.2013 - 0.1.5
+* Add LESS function.php extension
+
 ## 19.12.2013 - 0.1.4
 * Add sidebar, search and searchform templates
 * Add functions structure
