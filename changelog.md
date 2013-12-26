@@ -1,5 +1,9 @@
 # Alisios changelog
 
+## 26.12.2013 - 0.2
+* Add Bootstrap function.php extension
+* Add container and cols class
+
 ## 20.12.2013 - 0.1.5
 * Add LESS function.php extension
 
