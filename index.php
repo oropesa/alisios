@@ -7,7 +7,7 @@ if( !function_exists('wp') && !empty($_SERVER['SCRIPT_FILENAME']) && basename(__
 
 <?php get_header(); ?>
 
-    <section id="primary" role="main">
+    <section id="primary" class="content col-xs-12 col-sm-12 col-md-12" role="main">
 
         <?php if( have_posts() ) : ?>
 

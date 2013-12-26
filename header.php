@@ -17,12 +17,14 @@
 
         <header class="header" role="banner" >
 
-            <h1 class="site-title">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php echo esc_attr( get_bloginfo( 'name' ) ); ?></a>
-            </h1>
+            <div class="container">
+                <h1 class="site-title">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php echo esc_attr( get_bloginfo( 'name' ) ); ?></a>
+                </h1>
 
-            <h2 class="site-description"><?php echo esc_attr( get_bloginfo( 'description' ) ); ?></h2>
+                <h2 class="site-description"><?php echo esc_attr( get_bloginfo( 'description' ) ); ?></h2>
+            </div>
 
         </header>
 
-        <div id="page" class="content-wrapper">
+        <div id="page" class="content-wrapper container">

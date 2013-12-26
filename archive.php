@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-    <section id="primary" role="main">
+    <section id="primary" class="content col-xs-12 col-sm-12 col-md-12" role="main">
 
         <header class="page-header">
 

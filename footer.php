@@ -4,7 +4,7 @@
 
 		<footer class="footer" role="contentinfo">
 
-			<div class="footer-content">
+			<div class="footer-content container">
 
                 <p>&copy; 2013 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php echo esc_attr( get_bloginfo( 'name' ) ); ?></a>.</p>
 
