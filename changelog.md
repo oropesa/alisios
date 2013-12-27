@@ -1,5 +1,8 @@
 # Alisios changelog
 
+## 27.12.2013 - 0.2.1
+* Add Font-Awesome function.php extension
+
 ## 26.12.2013 - 0.2
 * Add Bootstrap function.php extension
 * Add container and cols class
