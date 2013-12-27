@@ -6,13 +6,15 @@
 
         <header class="entry-header">
 
-            <h1 class="entry-title">No se ha encontrado nada</h1>
+            <h1 class="entry-title"><?php _e( 'Nothing Found', 'alisios' ); ?></h1>
 
         </header><!-- .entry-header -->
 
         <section class="article-content">
 
-            <p>Lo sentimos, pero todavía no hay ninguna entrada relativa a lo que busca.</p>
+            <p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'alisios' ); ?></p>
+
+            <?php get_search_form(); ?>
 
         </section><!-- .entry-content -->
 

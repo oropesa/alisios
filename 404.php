@@ -8,14 +8,19 @@
 
             <header class="entry-header">
 
-                <h1 class="entry-title">Error 404. No encontrado</h1>
+                <h1 class="entry-title"><?php _e('Not Found. Error 404', 'alisios'); ?></h1>
 
             </header><!-- .entry-header -->
 
             <section class="article-content">
 
-                <p>En serio, En este lugar no hay nada y lo que usted busca ya no existe (o incluso, nunca ha existido).</p>
-                <p>Sin embargo, aquí hay cosas interesantes. ¡Echa un vistazo!</p>
+                <?php _e( "<p>Apologies, at this location there are nothing and what you looking for no longer (or indeed never did) exists.</p><p>However, there are cool stuff here. Take a look!</p>", 'alisios' ); ?>
+
+                <?php
+                get_search_form();
+
+                the_widget( 'WP_Widget_Recent_Posts' );
+                ?>
 
             </section><!-- .entry-content -->
 

@@ -7,7 +7,7 @@
         <header class="page-header">
 
             <h1 class="page-title">
-                Resultados de la búsqueda: <span><?php echo get_search_query() ?></span>
+                <?php printf( __( 'Search Results for: %s', 'alisios' ), '<span>' . get_search_query() . '</span>' ); ?>
             </h1>
 
         </header><!-- /.page-header -->
