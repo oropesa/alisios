@@ -21,4 +21,6 @@ if( !function_exists('wp') && !empty($_SERVER['SCRIPT_FILENAME']) && basename(__
 
     </section>
 
+<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

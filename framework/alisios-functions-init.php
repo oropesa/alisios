@@ -10,3 +10,6 @@ require_once( $extensionsDirectory . '/bootstrap/init.php' );
 
 /* Languages */
 require_once( $extensionsDirectory . '/languages/init.php' );
+
+/* Sidebars */
+require_once( $extensionsDirectory . '/sidebars/init.php' );
