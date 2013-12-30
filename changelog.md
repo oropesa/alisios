@@ -1,5 +1,9 @@
 # Alisios changelog
 
+## 30.12.2013 - 0.3.1
+* Add Sidebars function.php extension
+* Add aside#secondary and 3 .footer-sidebar
+
 ## 27.12.2013 - 0.3
 * Add Multilingual function.php extension
 * Add Spanish translation
