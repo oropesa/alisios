@@ -1,5 +1,12 @@
 # Alisios changelog
 
+## 19.03.2013 - 0.3.2
+* Update less.js version to 1.7.0 (before 1.5.0)
+* Update bootstrap version to 3.1.1 (before 3.0.3)
+* Define Constant Vars in alisios-functions-init.php
+* Use Constant in template files (for language)
+* Refactoring framework code
+
 ## 30.12.2013 - 0.3.1
 * Add Sidebars function.php extension
 * Add aside#secondary and 3 .footer-sidebar
