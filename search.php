@@ -7,7 +7,7 @@
         <header class="page-header">
 
             <h1 class="page-title">
-                <?php printf( __( 'Search Results for: %s', 'alisios' ), '<span>' . get_search_query() . '</span>' ); ?>
+                <?php printf( __( 'Search Results for: %s', ALISIOS_I18N ), '<span>' . get_search_query() . '</span>' ); ?>
             </h1>
 
         </header><!-- /.page-header -->

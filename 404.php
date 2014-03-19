@@ -8,13 +8,13 @@
 
             <header class="entry-header">
 
-                <h1 class="entry-title"><?php _e('Not Found. Error 404', 'alisios'); ?></h1>
+                <h1 class="entry-title"><?php _e('Not Found. Error 404', ALISIOS_I18N); ?></h1>
 
             </header><!-- .entry-header -->
 
             <section class="article-content">
 
-                <?php _e( "<p>Apologies, at this location there are nothing and what you looking for no longer (or indeed never did) exists.</p><p>However, there are cool stuff here. Take a look!</p>", 'alisios' ); ?>
+                <?php _e("<p>Apologies, at this location there are nothing and what you looking for no longer (or indeed never did) exists.</p><p>However, there are cool stuff here. Take a look!</p>", ALISIOS_I18N); ?>
 
                 <?php
                 get_search_form();

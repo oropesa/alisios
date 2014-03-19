@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Alisios\n"
-"POT-Creation-Date: 2013-12-27 19:39-0000\n"
-"PO-Revision-Date: 2013-12-27 19:47-0000\n"
+"POT-Creation-Date: 2014-03-19 14:53-0000\n"
+"PO-Revision-Date: 2014-03-19 14:53-0000\n"
 "Last-Translator: Oropesa <coropesa.gcc@gmail.com>\n"
 "Language-Team: oropensando.com <carlos@oropensando.com>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.3\n"
+"X-Generator: Poedit 1.6.4\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e;_n\n"
@@ -62,6 +62,22 @@ msgstr "Entradas del año: %s"
 #: ../archive.php:39
 msgid "Archives"
 msgstr "Entradas"
+
+#: ../framework/alisios-functions-setup.php:18
+msgid "Sidebar"
+msgstr "Barra lateral"
+
+#: ../framework/alisios-functions-setup.php:28
+msgid "Footer #1"
+msgstr "Pie de página #1"
+
+#: ../framework/alisios-functions-setup.php:37
+msgid "Footer #2"
+msgstr "Pie de página #2"
+
+#: ../framework/alisios-functions-setup.php:46
+msgid "Footer #3"
+msgstr "Pie de página #3"
 
 #: ../loop-empty.php:9
 msgid "Nothing Found"
