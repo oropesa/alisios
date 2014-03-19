@@ -1,28 +1,32 @@
 <?php
-class AlisiosLess {
+class AlisiosFunctionsHead {
 
     /*
-     * Hook
-     * Add in wp_head our style.css/less
+     * LESS
+     * Load style.css or less.css, depend of var ALISIOS_USE_LESS
      */
-    public static function add_stylesheet() {
-        /**
-         * @var bool
-         * When it's true, style.less is load. If not, load style.css
-         */
-        $useLess = true;
-
-        if( !$useLess ) {
-            wp_enqueue_style( 'alisios-style', get_stylesheet_uri() );
+    public static function enqueue_stylesheet() {
+        if(ALISIOS_USE_LESS) {
+            wp_enqueue_style('alisios-style', ALISIOS_URL_THEME  . '/style.less');
+            wp_enqueue_script('alisios-less', ALISIOS_URL_JS_LIB . '/less.min.js');
         } else {
-            wp_enqueue_style( 'alisios-style', get_template_directory_uri() . '/style.less' );
-            wp_enqueue_script( 'alisios-less', get_template_directory_uri() . '/framework/extensions/less/less.min.js');
+            wp_enqueue_style('alisios-style', ALISIOS_URL_STYLE );
         }
 
     }
 
     /*
-     * Filter
+     *
+     */
+    public static function enqueue_scripts_and_stylesheet() {
+        //enqueue style
+        self::enqueue_stylesheet();
+        //enqueue js
+        wp_enqueue_script('bootstrap-js', ALISIOS_URL_JS_LIB . '/bootstrap.min.js', array('jquery'), '3.1.1', true );
+    }
+
+    /*
+     * LESS
      * Rebuild link stylesheet to less format in wp_enqueue_styles
      */
     public static function wp_enqueue_styles_less($tag, $handle) {
