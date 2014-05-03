@@ -2,11 +2,17 @@
 
 <?php get_header(); ?>
 
+    <?php AlisiosHooks::content_before(); ?>
+
     <section id="primary" class="content col-xs-12 col-sm-8" role="main">
+
+        <?php AlisiosHooks::content_top(); ?>
 
         <header class="page-header">
 
-            <h1 class="archive-title">
+            <?php AlisiosHooks::entry_header_top(); ?>
+
+            <h1 class="page-title archive-title">
                 <?php
                 if( is_category() ) :
                     printf(__('Category Archives: %s', ALISIOS_I18N), '<span>' . single_cat_title('', false) . '</span>');
@@ -60,6 +66,8 @@
             endif;
             ?>
 
+            <?php AlisiosHooks::entry_header_bottom(); ?>
+
         </header><!-- /.page-header -->
 
         <?php if( have_posts() ) : ?>
@@ -72,8 +80,11 @@
 
         <?php endif; ?>
 
+        <?php AlisiosHooks::content_bottom(); ?>
 
     </section>
+
+    <?php AlisiosHooks::content_after(); ?>
 
 <?php get_sidebar(); ?>
 

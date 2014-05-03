@@ -2,7 +2,11 @@
 
 <?php get_header(); ?>
 
+    <?php AlisiosHooks::content_before(); ?>
+
     <section id="primary" class="content col-xs-12 col-sm-8" role="main">
+
+        <?php AlisiosHooks::content_top(); ?>
 
         <?php if( have_posts() ) : ?>
 
@@ -10,7 +14,11 @@
 
         <?php endif; ?>
 
+        <?php AlisiosHooks::content_bottom(); ?>
+
     </section>
+
+    <?php AlisiosHooks::content_after(); ?>
 
 <?php get_sidebar(); ?>
 

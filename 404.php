@@ -2,31 +2,71 @@
 
 <?php get_header(); ?>
 
+    <?php AlisiosHooks::content_before(); ?>
+
     <section id="primary" class="content col-xs-12 col-sm-8" role="main">
 
-        <article id="page-404" class="page not-found">
+        <?php AlisiosHooks::content_top(); ?>
 
-            <header class="entry-header">
+        <?php AlisiosHooks::content_entry_before(); ?>
 
-                <h1 class="entry-title"><?php _e('Not Found. Error 404', ALISIOS_I18N); ?></h1>
+        <div id="content" class="post-wrap">
 
-            </header><!-- .entry-header -->
+            <?php AlisiosHooks::content_entry_top(); ?>
 
-            <section class="article-content">
+            <?php AlisiosHooks::entry_before(); ?>
 
-                <?php _e("<p>Apologies, at this location there are nothing and what you looking for no longer (or indeed never did) exists.</p><p>However, there are cool stuff here. Take a look!</p>", ALISIOS_I18N); ?>
+            <article id="page-404" class="page not-found">
 
-                <?php
-                get_search_form();
+                <?php AlisiosHooks::entry_top(); ?>
 
-                the_widget( 'WP_Widget_Recent_Posts' );
-                ?>
+                <header class="entry-header">
 
-            </section><!-- .entry-content -->
+                    <?php AlisiosHooks::entry_header_top(); ?>
 
-        </article><!-- #page-404 -->
+                    <h1 class="entry-title"><?php _e('Not Found. Error 404', ALISIOS_I18N); ?></h1>
+
+                    <?php AlisiosHooks::entry_header_bottom(); ?>
+
+                </header><!-- .entry-header -->
+
+                <?php AlisiosHooks::entry_content_before(); ?>
+
+                <section class="article-content">
+
+                    <?php AlisiosHooks::entry_content_top(); ?>
+
+                        <?php _e("<p>Apologies, at this location there are nothing and what you looking for no longer (or indeed never did) exists.</p><p>However, there are cool stuff here. Take a look!</p>", ALISIOS_I18N); ?>
+
+                        <?php
+                        get_search_form();
+
+                        the_widget( 'WP_Widget_Recent_Posts' );
+                        ?>
+
+                    <?php AlisiosHooks::entry_content_bottom(); ?>
+
+                </section><!-- .entry-content -->
+
+                <?php AlisiosHooks::entry_content_after(); ?>
+
+                <?php AlisiosHooks::entry_bottom(); ?>
+
+            </article><!-- #page-404 -->
+
+            <?php AlisiosHooks::entry_after(); ?>
+
+            <?php AlisiosHooks::content_entry_bottom(); ?>
+
+        </div><!--/.post-wrap-->
+
+        <?php AlisiosHooks::content_entry_after(); ?>
+
+        <?php AlisiosHooks::content_bottom(); ?>
 
     </section>
+
+    <?php AlisiosHooks::content_after(); ?>
 
 <?php get_sidebar(); ?>
 

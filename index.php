@@ -7,7 +7,11 @@ if( !function_exists('wp') && !empty($_SERVER['SCRIPT_FILENAME']) && basename(__
 
 <?php get_header(); ?>
 
+    <?php AlisiosHooks::content_before(); ?>
+
     <section id="primary" class="content col-xs-12 col-sm-8" role="main">
+
+        <?php AlisiosHooks::content_top(); ?>
 
         <?php if( have_posts() ) : ?>
 
@@ -19,7 +23,11 @@ if( !function_exists('wp') && !empty($_SERVER['SCRIPT_FILENAME']) && basename(__
 
         <?php endif; ?>
 
+        <?php AlisiosHooks::content_bottom(); ?>
+
     </section>
+
+    <?php AlisiosHooks::content_after(); ?>
 
 <?php get_sidebar(); ?>
 
