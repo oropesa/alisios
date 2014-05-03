@@ -1,6 +1,11 @@
 # Alisios changelog
 
-## 19.03.2013 - 0.3.2
+## 03.05.2014 - 0.4.0
+* Add Alisios Hook Class
+* Add Theme Hook Alliance template
+* Integrate hook structure in all templates
+
+## 19.03.2014 - 0.3.2
 * Update less.js version to 1.7.0 (before 1.5.0)
 * Update bootstrap version to 3.1.1 (before 3.0.3)
 * Define Constant Vars in alisios-functions-init.php
