@@ -9,7 +9,7 @@ if( !function_exists('wp') && !empty($_SERVER['SCRIPT_FILENAME']) && basename(__
 
     <?php AlisiosHooks::content_before(); ?>
 
-    <section id="primary" class="content col-xs-12 col-sm-8" role="main">
+    <section id="primary" <?php content_class(); ?> role="main">
 
         <?php AlisiosHooks::content_top(); ?>
 

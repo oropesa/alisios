@@ -5,7 +5,7 @@ class AlisiosFunctionsFooter {
 
     public static function credits() {
         ?>
-        <div class="credits col-xs-12 col-sm-12">
+        <div <?php footer_class('credits'); ?>>
             <p>&copy; 2013 <a href="<?php bloginfo('url'); ?>" title="Alisios">Alisios</a>.</p>
         </div>
         <?php
@@ -13,7 +13,7 @@ class AlisiosFunctionsFooter {
 
     public static function widget() {
         ?>
-        <div class="footer-widgets col-xs-12 col-sm-12">
+        <div <?php footer_class('footer-widgets'); ?>>
             <?php
             if( is_active_sidebar('footer-sidebar-1')
                 || is_active_sidebar('footer-sidebar-2')
@@ -39,4 +39,33 @@ class AlisiosFunctionsFooter {
         <?php
     }
 
+}
+
+/**
+ * Display the classes for the sidebar element.
+ */
+function footer_class( $class = '' ) {
+    // Separates classes with a single space, collates classes for body element
+    echo 'class="' . join(' ', get_footer_class( $class )) . '"';
+}
+
+function get_footer_class( $class = '' ) {
+    $classes = array();
+
+    $classes[] = 'footer';
+    $classes[] = 'col-xs-12';
+    $classes[] = 'col-sm-12';
+
+    if(!empty($class)) {
+        if(!is_array($class))
+            $class = preg_split('#\s+#', $class);
+        $classes = array_merge($classes, $class);
+    } else {
+        // Ensure that we always coerce class to being an array.
+        $class = array();
+    }
+
+    $classes = array_map( 'esc_attr', $classes );
+
+    return apply_filters( 'footer_class', $classes, $class );
 }

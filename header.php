@@ -33,7 +33,7 @@
 
                 <?php AlisiosHooks::header_site_before(); ?>
 
-                <div id="site" class="site col-xs-12 col-sm-12">
+                <div id="site" <?php site_class(); ?>>
 
                     <?php AlisiosHooks::header_site_in(); ?>
 

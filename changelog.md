@@ -1,5 +1,11 @@
 # Alisios changelog
 
+## 08.05.2014 - 0.4.1
+* Add content_class, sidebar_class, site_class in templates
+* Do filters in *.class
+* Do filter in wp_title()
+* Separate sidebar stuff in alisios-functions-sidebar.php
+
 ## 03.05.2014 - 0.4.0
 * Add Alisios Hook Class
 * Add Theme Hook Alliance template

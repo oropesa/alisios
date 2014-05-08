@@ -2,7 +2,7 @@
 
 <?php AlisiosHooks::sidebar_before(); ?>
 
-<div id="secondary" class="sidebar col-xs-12 col-sm-4" role="complementary">
+<div id="secondary" <?php sidebar_class(); ?> role="complementary">
     <div class="sidebar-wrapper">
 
     <?php AlisiosHooks::sidebar_top(); ?>
