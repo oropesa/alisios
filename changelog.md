@@ -1,5 +1,6 @@
 # Alisios changelog
 
+
 ## 08.05.2014 - 0.4.1
 * Add content_class, sidebar_class, site_class in templates
 * Do filters in *.class
