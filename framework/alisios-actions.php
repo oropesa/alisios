@@ -9,10 +9,15 @@ add_action('widgets_init',              array('AlisiosFunctionsSidebar',    'reg
 /*
  * HEAD
  */
-add_filter('wp_title',                  array('AlisiosFunctionsHead', 'wp_title'), 10, 2);
+add_action('alisios_html_before',       array('AlisiosFunctionsHead',   'doctype'));
 
-add_action('wp_enqueue_scripts',        array('AlisiosFunctionsHead', 'enqueue_scripts_and_stylesheet'));
-add_filter('style_loader_tag',          array('AlisiosFunctionsHead', 'wp_enqueue_styles_less'), 5, 2);
+add_action('alisios_head_top',          array('AlisiosFunctionsHead',   'metas_top'));
+add_action('alisios_head_bottom',       array('AlisiosFunctionsHead',   'canonical'));
+
+add_filter('wp_title',                  array('AlisiosFunctionsHead',   'wp_title'), 10, 2);
+
+add_action('wp_enqueue_scripts',        array('AlisiosFunctionsHead',   'enqueue_scripts_and_stylesheet'));
+add_filter('style_loader_tag',          array('AlisiosFunctionsHead',   'wp_enqueue_styles_less'), 5, 2);
 
 /*
  * HEADER
