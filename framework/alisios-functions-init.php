@@ -29,6 +29,9 @@ require_once( ALISIOS_DIR_FRAMEWORK . '/alisios-functions-header.php' );
 require_once( ALISIOS_DIR_FRAMEWORK . '/alisios-functions-content.php' );
 require_once( ALISIOS_DIR_FRAMEWORK . '/alisios-functions-sidebar.php' );
 require_once( ALISIOS_DIR_FRAMEWORK . '/alisios-functions-footer.php' );
+
+require_once( ALISIOS_DIR_FRAMEWORK . '/alisios-functions-social.php' );
+
 require_once( ALISIOS_DIR_FRAMEWORK . '/alisios-hooks.php' );
 
 // ~~ LOAD ACTIONS

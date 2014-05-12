@@ -10,6 +10,7 @@ add_action('widgets_init',              array('AlisiosFunctionsSidebar',    'reg
  * HEAD
  */
 add_action('alisios_html_before',       array('AlisiosFunctionsHead',   'doctype'));
+add_filter('language_attributes',       array('AlisiosFunctionsSocial', 'add_opengraph_namespace'));
 
 add_action('alisios_head_top',          array('AlisiosFunctionsHead',   'metas_top'));
 add_action('alisios_head_bottom',       array('AlisiosFunctionsHead',   'canonical'));
