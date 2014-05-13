@@ -7,7 +7,13 @@ class AlisiosFunctionsSocial {
      * @param string $input The language_attributes filter
      * @return string
      */
-    public function add_opengraph_namespace( $input ) {
-        return $input . ' prefix="og: http://ogp.me/ns#"';
+    public static function add_opengraph_namespace( $input ) {
+        //OpenGraph - Facebook
+        $input .= ' prefix="og: http://ogp.me/ns#"';
+        //Schema - Google+
+        $input .= ' itemscope itemtype="http://schema.org/Product"';
+
+        return $input;
     }
+
 }
