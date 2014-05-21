@@ -12,7 +12,8 @@ class AlisiosFunctionsSocial {
         //OpenGraph - Facebook
         $input .= ' prefix="og: http://ogp.me/ns#"';
         //Schema - Google+
-        $input .= ' itemscope itemtype="http://schema.org/Blog"';
+        $schemaType = apply_filters('alisios_schema_type', 'Blog');
+        $input .= ' itemscope itemtype="http://schema.org/' . $schemaType . '"';
 
         return $input;
     }
