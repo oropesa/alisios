@@ -30,3 +30,10 @@ add_action('alisios_header_site_in',    array('AlisiosFunctionsHeader', 'site'))
  */
 add_action('alisios_footer_in',         array('AlisiosFunctionsFooter', 'credits'), 20);
 add_action('alisios_footer_in',         array('AlisiosFunctionsFooter', 'widget'),  10);
+
+/*
+ * ADMIN
+ */
+if(is_admin() ) {
+    $AlisiosAdminSocial = new AlisiosAdminSocial();
+}
