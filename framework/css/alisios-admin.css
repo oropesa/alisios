@@ -1,0 +1,78 @@
+/*
+ * Alisios Admin
+ */
+/**
+ * CORE
+ */
+.alisios-admin-page .alisios-title .dashicons {
+  font-size: 2rem;
+  width: 2rem;
+  height: 2rem;
+}
+.alisios-admin-page .alisios_content_wrapper {
+  display: table;
+  width: 100%;
+}
+.alisios-admin-page .alisios_content_wrapper .nav-tab:before {
+  font-family: "dashicons";
+  margin-right: 0.2rem;
+  position: relative;
+  top: 2px;
+}
+.alisios-admin-page .alisios_content_wrapper table.alisiostab {
+  display: none;
+  border-bottom: 1px solid #dddddd;
+}
+.alisios-admin-page .alisios_content_wrapper table.alisiostab.active {
+  display: block;
+}
+.alisios-admin-page .alisios_content_wrapper table.alisiostab tr {
+  border-bottom: 1px dotted #dddddd;
+}
+.alisios-admin-page .alisios_content_wrapper table.alisiostab tr:last-child {
+  border-bottom: 0;
+}
+.alisios-admin-page .alisios_content_wrapper input.textinput,
+.alisios-admin-page .alisios_content_wrapper select.select textarea.textinput {
+  margin: 6px 0 0 0;
+  padding: 5px;
+  display: inline-block;
+}
+.alisios-admin-page .alisios_content_wrapper select.select {
+  padding: 3px 5px;
+}
+.alisios-admin-page .alisios_content_wrapper input.textinput,
+.alisios-admin-page .alisios_content_wrapper select,
+.alisios-admin-page .alisios_content_wrapper textarea {
+  width: 400px;
+  max-width: 98%;
+}
+.alisios-admin-page .alisios_content_wrapper label.checkbox {
+  margin-right: 0.3rem;
+}
+.alisios-admin-page .alisios_content_wrapper label.addon {
+  background: #dddddd;
+  border: 1px solid #dddddd;
+  padding: 0.3rem 0.1rem 0.3rem 0.5rem;
+  color: #000001;
+  position: relative;
+  top: -1px;
+}
+.alisios-admin-page .alisios_content_wrapper input.addon {
+  padding-left: 0.1rem;
+}
+/*
+ * Social
+ */
+#social_facebook-tab:before {
+  content: "\f305";
+  color: #3b5998;
+}
+#social_twitter-tab:before {
+  content: "\f301";
+  color: #4099ff;
+}
+#social_googleplus-tab:before {
+  content: "\f462";
+  color: #d34836;
+}

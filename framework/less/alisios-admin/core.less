@@ -1,0 +1,79 @@
+/**
+ * CORE
+ */
+
+.alisios-admin-page {
+  .alisios-title {
+    .dashicons {
+      font-size: 2rem;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  .alisios_content_wrapper {
+    display: table;
+    width: 100%;
+
+    .nav-tab:before {
+      font-family: "dashicons";
+      margin-right: 0.2rem;
+      position: relative;
+      top: 2px;
+    }
+
+    table.alisiostab {
+      display: none;
+      border-bottom: 1px solid @gray;
+
+      &.active {
+        display: block;
+      }
+
+      tr {
+        border-bottom: 1px dotted @gray;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+
+    }
+
+    input.textinput,
+    select.select
+    textarea.textinput {
+      margin: 6px 0 0 0;
+      padding: 5px;
+      display: inline-block;
+    }
+
+    select.select {
+      padding: 3px 5px;
+    }
+
+    input.textinput,
+    select,
+    textarea {
+      width: 400px;
+      max-width: 98%;
+    }
+
+    label.checkbox {
+      margin-right: 0.3rem;
+    }
+
+    label.addon {
+      background: @gray;
+      border: 1px solid @gray;
+      padding: 0.3rem 0.1rem 0.3rem 0.5rem;
+      color: @black;
+      position: relative;
+      top: -1px;
+    }
+
+    input.addon {
+      padding-left: 0.1rem;
+    }
+  }
+}
