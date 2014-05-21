@@ -16,6 +16,8 @@ define('ALISIOS_URL_FONTS',     ALISIOS_URL_FRAMEWORK . '/fonts');
 define('ALISIOS_URL_CSS',       ALISIOS_URL_FRAMEWORK . '/css');
 define('ALISIOS_URL_JS_LIB',    ALISIOS_URL_FRAMEWORK . '/js/jslib');
 define('ALISIOS_URL_JS',        ALISIOS_URL_FRAMEWORK . '/js');
+define('ALISIOS_URL_LESS',      ALISIOS_URL_FRAMEWORK . '/less');
+
 
 //dir
 define('ALISIOS_DIR_THEME',     get_template_directory());
@@ -35,6 +37,10 @@ require_once( ALISIOS_DIR_FRAMEWORK . '/functions-footer.php' );
 require_once( ALISIOS_DIR_FRAMEWORK . '/functions-social.php' );
 
 require_once( ALISIOS_DIR_FRAMEWORK . '/alisios-hooks.php' );
+
+// ~~ LOAD ADMIN FUNCTIONS
+require_once( ALISIOS_DIR_ADMIN . '/alisios-admin.php' );
+require_once( ALISIOS_DIR_ADMIN . '/class-social.php' );
 
 // ~~ LOAD ACTIONS
 
