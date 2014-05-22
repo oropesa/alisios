@@ -44,7 +44,7 @@ class AlisiosAdminSocial {
 
             'use_facebook' => array(
                 'id'        => 'use_facebook',
-                'label'     => __('Add Open Graph meta data', ALISIOS_I18N),
+                'label'     => __('Add Facebook meta data?', ALISIOS_I18N),
                 'section'   => $this->sections['Facebook']['id'],
                 'type'      => 'checkbox',
                 'desc'      => __('Add Open Graph meta data to your site\'s <code>&lt;head&gt;</code> section.', ALISIOS_I18N),
@@ -115,7 +115,7 @@ class AlisiosAdminSocial {
                 'label'     => __('Add Google+ meta data?', ALISIOS_I18N),
                 'section'   => $this->sections['GooglePlus']['id'],
                 'type'      => 'checkbox',
-                'desc'      => __('Add Google+ meta data to your site\'s <code>&lt;head&gt;</code> section.', ALISIOS_I18N),
+                'desc'      => __('Add Schema meta data to your site\'s <code>&lt;head&gt;</code> section.', ALISIOS_I18N),
                 //sanitize
                 'error'     => __('Google+ Checkbox failed because of yes.', ALISIOS_I18N),
             ),
