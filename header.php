@@ -3,15 +3,15 @@
 <?php AlisiosHooks::html_before(); ?>
 <html <?php language_attributes(); ?> >
 <head>
-    <?php AlisiosHooks::head_top(); ?>
+<?php AlisiosHooks::head_top(); ?>
 
-    <title><?php wp_title( '/', true, 'right' ); ?></title>
+<title><?php wp_title( '/', true, 'right' ); ?></title>
 
-    <?php AlisiosHooks::head_bottom(); ?>
+<?php AlisiosHooks::head_bottom(); ?>
 
-    <!-- BEG wp_head -->
-    <?php wp_head(); ?>
-    <!-- END wp_head -->
+<!-- BEG wp_head -->
+<?php wp_head(); ?>
+<!-- END wp_head -->
 </head>
 
 <body <?php body_class(); ?>>
