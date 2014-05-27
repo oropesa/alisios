@@ -63,6 +63,39 @@ class AlisiosAdminSocial {
                 'error'     => __('Open Graph Image URL is weird.', ALISIOS_I18N),
             ),
 
+            'facebook_app_id' => array(
+                'id'        => 'facebook_app_id',
+                'label'     => __('Facebook App ID', ALISIOS_I18N),
+                'section'   => $this->sections['Facebook']['id'],
+                'type'      => 'textinput',
+                'desc'      => __('If you have a Facebook page for your business, add that URL here and link it on your Facebook page.', ALISIOS_I18N),
+                'placeholder' => '123456789012345',
+                //sanitize
+                'error'     => __('Facebook App ID is weird.', ALISIOS_I18N),
+            ),
+
+            'facebook_publisher' => array(
+                'id'        => 'facebook_publisher',
+                'label'     => __('Facebook Page', ALISIOS_I18N),
+                'section'   => $this->sections['Facebook']['id'],
+                'type'      => 'textinput',
+                'desc'      => __('If you have a Facebook page for your business, add that URL here and link it on your Facebook page.', ALISIOS_I18N),
+                'placeholder' => 'https://www.facebook.com/[Facebook_Page]',
+                //sanitize
+                'error'     => __('Facebook Publisher URL is weird.', ALISIOS_I18N),
+            ),
+
+            'facebook_author' => array(
+                'id'        => 'facebook_author',
+                'label'     => __('Facebook Author Page', ALISIOS_I18N),
+                'section'   => $this->sections['Facebook']['id'],
+                'type'      => 'textinput',
+                'desc'      => __('If you have a Facebook profile, add that URL here and link it on your Facebook page\'s about page.', ALISIOS_I18N),
+                'placeholder' => 'https://plus.google.com/[Facebook_Profile]]',
+                //sanitize
+                'error'     => __('Facebook Author URL is weird.', ALISIOS_I18N),
+            ),
+
             //TWITTER
 
             'use_twitter' => array(
