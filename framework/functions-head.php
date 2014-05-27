@@ -5,85 +5,100 @@ class AlisiosFunctionsHead {
      * Doctype HTML5
      */
     public static function doctype() {
-        ?>
-        <!doctype html>
-    <?php
+        echo "<!doctype html>" . "\n";
     }
 
     /**
      * Metas on the top of title
      */
     public static function metas_top() {
-        ?>
-        <?php // WP Charset ?>
-        <meta charset="<?php bloginfo( 'charset' ); ?>">
 
-        <?php // Mobile viewport optimized ?>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        // WP Charset
+        echo '<meta charset="' . get_bloginfo( 'charset' ) . '">' . "\n";
 
-        <?php // Always force latest IE rendering engine (even in intranet) & Chrome Frame ?>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <?php
+        // Mobile viewport optimized
+        echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">' . "\n";
+
+        // Always force latest IE rendering engine (even in intranet) & Chrome Frame
+        echo '<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">';
+
+    }
+
+    /**
+     * Filter for the namespace, adding the OpenGraph namespace.
+     * @link https://developers.facebook.com/docs/web/tutorials/scrumptious/open-graph-object/
+     * @link https://developers.google.com/+/web/snippet/
+     * @param string $input The language_attributes filter
+     * @return string
+     */
+    public static function add_html_namespace( $input ) {
+        //OpenGraph - Facebook
+        $input .= ' prefix="og: http://ogp.me/ns#"';
+        //Schema - Google+
+        $schemaType = apply_filters('alisios_html_schema_type', 'Blog');
+        $input .= ' itemscope itemtype="http://schema.org/' . $schemaType . '"';
+
+        return $input;
     }
 
     /**
      * Canonical Link
      */
-    public static function canonical() {
+    public static function canonical($display = true) {
         $canonical = false;
         // Set decent canonicals for homepage, singulars and taxonomy pages
-        if(is_singular()) {
+        if( is_singular() ) {
             $obj       = get_queried_object();
             $canonical = get_permalink( $obj->ID );
         }
-        elseif(is_search()) {
+        elseif( is_search() ) {
             $canonical = get_search_link();
         }
-        elseif(is_front_page()) {
+        elseif( is_front_page() ) {
             $canonical = home_url( '/' );
         }
-        elseif(is_home() && 'page' == get_option('show_on_front')) {
+        elseif( is_home() && 'page' == get_option('show_on_front') ) {
             $canonical = get_permalink(get_option('page_for_posts'));
         }
-        elseif(is_tax() || is_tag() || is_category()) {
+        elseif( is_tax() || is_tag() || is_category() ) {
             $term = get_queried_object();
             $canonical = get_term_link($term, $term->taxonomy);
         }
-        elseif(is_post_type_archive()) {
+        elseif( is_post_type_archive() ) {
             $post_type = get_query_var('post_type');
-            if(is_array($post_type)) {
+            if( is_array($post_type) ) {
                 $post_type = reset( $post_type );
             }
-            $canonical = get_post_type_archive_link($post_type);
+            $canonical = get_post_type_archive_link( $post_type );
         }
-        elseif(is_author()) {
-            $canonical = get_author_posts_url(get_query_var('author'), get_query_var('author_name'));
+        elseif( is_author() ) {
+            $canonical = get_author_posts_url( get_query_var('author'), get_query_var('author_name') );
         }
-        elseif(is_archive()) {
-            if(is_date()) {
-                if(is_day()) {
-                    $canonical = get_day_link(get_query_var('year'), get_query_var('monthnum'), get_query_var('day'));
+        elseif( is_archive() ) {
+            if( is_date() ) {
+                if( is_day() ) {
+                    $canonical = get_day_link( get_query_var('year'), get_query_var('monthnum'), get_query_var('day') );
                 }
-                elseif(is_month()) {
-                    $canonical = get_month_link(get_query_var('year'), get_query_var('monthnum'));
-                } elseif(is_year()) {
-                    $canonical = get_year_link(get_query_var('year'));
+                elseif( is_month() ) {
+                    $canonical = get_month_link( get_query_var('year'), get_query_var('monthnum') );
+                } elseif( is_year() ) {
+                    $canonical = get_year_link( get_query_var('year') );
                 }
             }
         }
 
         //avoid pagination
-        if($canonical && get_query_var('paged') > 1) {
+        if( $canonical && get_query_var('paged') > 1 ) {
             global $wp_rewrite;
-            if(!$wp_rewrite->using_permalinks()) {
-                $canonical = add_query_arg('paged', get_query_var('paged'), $canonical);
+            if( !$wp_rewrite->using_permalinks() ) {
+                $canonical = add_query_arg( 'paged', get_query_var('paged'), $canonical );
             }
             else {
-                if(is_front_page()) {
+                if( is_front_page() ) {
                     $base      = $wp_rewrite->using_index_permalinks() ? 'index.php/' : '/';
-                    $canonical = home_url($base);
+                    $canonical = home_url( $base );
                 }
-                $canonical = user_trailingslashit(trailingslashit($canonical) . trailingslashit($wp_rewrite->pagination_base) . get_query_var('paged'));
+                $canonical = user_trailingslashit( trailingslashit($canonical) . trailingslashit($wp_rewrite->pagination_base) . get_query_var('paged') );
             }
         }
 
@@ -91,8 +106,12 @@ class AlisiosFunctionsHead {
         $canonical = apply_filters( 'alisios_link_canonical', $canonical );
 
         //print
-        if ( is_string( $canonical ) && $canonical !== '' ) {
-            echo '<link rel="canonical" href="' . esc_url( $canonical, null, 'other' ) . '" />' . "\n";
+        if( $display ) {
+            if ( is_string($canonical) && !empty($canonical) ) {
+                echo '<link rel="canonical" href="' . esc_url( $canonical, null, 'other' ) . '" />' . "\n";
+            }
+        } else {
+            return $canonical;
         }
     }
 
@@ -123,7 +142,47 @@ class AlisiosFunctionsHead {
         if ( $paged >= 2 || $page >= 2 )
             $title .= " $sep " . sprintf( __( 'Page %s', ALISIOS_I18N ), max( $paged, $page ) );
 
+        // Max Length, 70 characters
+        if( strlen($title) > 70 )
+            $title = substr($title, 0, 70);
+
         return $title;
+    }
+
+    /*
+     * Description Filter
+     */
+    public static function description( $description ) {
+
+        // Set decent description
+        if( is_single() ) {
+            if( has_excerpt() )
+                $description = get_the_excerpt();
+        }
+        elseif( is_search() ) {
+            $description = __('Search results in ', ALISIOS_I18N) . get_bloginfo('name') . ': ' . get_search_query();
+        }
+        elseif( is_category() ) {
+            $description = wp_strip_all_tags(category_description());
+        }
+        elseif( is_tag() ) {
+            $description = wp_strip_all_tags(tag_description());
+        }
+        elseif( is_attachment() ) {
+            $description = get_the_content();
+        }
+        elseif( is_author() ) {
+            $description = get_the_author_meta('description');
+        }
+
+        if( empty($description) )
+            $description = get_bloginfo('description');
+
+        // Max Length, 155 characters
+        if( strlen($description) > 155 )
+            $description = substr($description, 0, 155);
+
+        return $description;
     }
 
     /*
@@ -167,4 +226,12 @@ class AlisiosFunctionsHead {
         }
         return $tag;
     }
+}
+
+function alisios_description( $display = true ) {
+    $description = apply_filters('alisios_description', get_bloginfo('description'));
+    if( $display && !empty($description) )
+        echo '<meta name="description" content="' . $description . '">';
+    else
+        return $description;
 }
