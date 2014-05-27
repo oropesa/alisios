@@ -10,12 +10,15 @@ add_action('widgets_init',              array('AlisiosFunctionsSidebar',    'reg
  * HEAD
  */
 add_action('alisios_html_before',       array('AlisiosFunctionsHead',   'doctype'));
-add_filter('language_attributes',       array('AlisiosFunctionsSocial', 'add_html_namespace'));
+add_filter('language_attributes',       array('AlisiosFunctionsHead',   'add_html_namespace'));
 
 add_action('alisios_head_top',          array('AlisiosFunctionsHead',   'metas_top'));
 add_action('alisios_head_bottom',       array('AlisiosFunctionsHead',   'canonical'));
 
+add_action('alisios_head_bottom',       array('AlisiosFunctionsSocial', 'social_tags'));
+
 add_filter('wp_title',                  array('AlisiosFunctionsHead',   'wp_title'), 10, 2);
+add_filter('alisios_description',       array('AlisiosFunctionsHead',   'description'));
 
 add_action('wp_enqueue_scripts',        array('AlisiosFunctionsHead',   'enqueue_scripts_and_stylesheet'));
 add_filter('style_loader_tag',          array('AlisiosFunctionsHead',   'wp_enqueue_styles_less'), 5, 2);
