@@ -6,6 +6,7 @@
 <?php AlisiosHooks::head_top(); ?>
 
 <title><?php wp_title( '/', true, 'right' ); ?></title>
+<?php alisios_description(); ?>
 
 <?php AlisiosHooks::head_bottom(); ?>
 
