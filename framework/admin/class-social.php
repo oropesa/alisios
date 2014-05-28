@@ -13,10 +13,8 @@ class AlisiosAdminSocial {
      * Call to Registers
      */
     function __construct() {
-        add_action('admin_menu', array($this, 'register_admin_social_page'));
         add_action('admin_init', array($this, 'register_social_options'));
-
-        self::loadOptions();
+        add_action('admin_menu', array($this, 'register_admin_social_page'));
     }
 
     /*
@@ -253,6 +251,8 @@ class AlisiosAdminSocial {
      * Register and add settings
      */
     public function register_social_options() {
+
+        self::loadOptions();
 
         register_setting(
             $this->opt_group,       // Option group
