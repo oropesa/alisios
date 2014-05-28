@@ -1,25 +1,25 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Alisios\n"
-"POT-Creation-Date: 2014-03-19 14:53-0000\n"
-"PO-Revision-Date: 2014-03-19 14:53-0000\n"
-"Last-Translator: Oropesa <coropesa.gcc@gmail.com>\n"
+"POT-Creation-Date: 2014-05-28 11:24-0000\n"
+"PO-Revision-Date: 2014-05-28 11:39-0000\n"
+"Last-Translator: Carlos Oropesa <carlos@oropensando.com>\n"
 "Language-Team: oropensando.com <carlos@oropensando.com>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.6.5\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e;_n\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../404.php:11
+#: ../404.php:27
 msgid "Not Found. Error 404"
 msgstr "No encontrado. Error 404"
 
-#: ../404.php:17
+#: ../404.php:39
 msgid ""
 "<p>Apologies, at this location there are nothing and what you looking for no "
 "longer (or indeed never did) exists.</p><p>However, there are cool stuff "
@@ -29,61 +29,257 @@ msgstr ""
 "no vuelva a existir (o, incluso, nunca ha existido)</p><p>De todos modos, "
 "hay cosas interesantes por aquí. ¡Eche un vistazo!"
 
-#: ../archive.php:12
+#: ../archive.php:18
 #, php-format
 msgid "Category Archives: %s"
 msgstr "Entradas de la categoría: %s"
 
-#: ../archive.php:15
+#: ../archive.php:21
 #, php-format
 msgid "Tag Archives: %s"
 msgstr "Entradas de la etiqueta: %s"
 
-#: ../archive.php:22
+#: ../archive.php:28
 #, php-format
 msgid "Author Archives: %s"
 msgstr "Entradas del autor: %s"
 
-#: ../archive.php:30
+#: ../archive.php:36
 #, php-format
 msgid "Daily Archives: %s"
 msgstr "Entradas del día: %s"
 
-#: ../archive.php:33
+#: ../archive.php:39
 #, php-format
 msgid "Monthly Archives: %s"
 msgstr "Entradas del mes: %s"
 
-#: ../archive.php:36
+#: ../archive.php:42
 #, php-format
 msgid "Yearly Archives: %s"
 msgstr "Entradas del año: %s"
 
-#: ../archive.php:39
+#: ../archive.php:45
 msgid "Archives"
 msgstr "Entradas"
 
-#: ../framework/alisios-functions-setup.php:18
+#: ../framework/admin/class-social.php:29
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../framework/admin/class-social.php:33
+msgid "Twitter"
+msgstr "Twitter"
+
+#: ../framework/admin/class-social.php:37
+msgid "Google+"
+msgstr "Google+"
+
+#: ../framework/admin/class-social.php:47
+msgid "Add Facebook meta data?"
+msgstr "¿Añadir metadatos de Facebook?"
+
+#: ../framework/admin/class-social.php:50
+msgid ""
+"Add Open Graph meta data to your site's <code>&lt;head&gt;</code> section."
+msgstr ""
+"Añade metadatos de Open Graph a la sección <code>&lt;head&gt;</code> de tu "
+"página. "
+
+#: ../framework/admin/class-social.php:52
+msgid "Open Graph Facebook Checkbox failed because of yes."
+msgstr "La casilla de validación de Open Graph de Facebook falló porque sí."
+
+#: ../framework/admin/class-social.php:57
+msgid "Default Open Graph Image URL"
+msgstr "URL de la imagen de Open Graph por defecto"
+
+#: ../framework/admin/class-social.php:60
+msgid ""
+"This image is used if the page being shared does not contain any images."
+msgstr ""
+"Esta imagen es usada si la página que se va a compartir no tiene ninguna "
+"imagen."
+
+#: ../framework/admin/class-social.php:63
+msgid "Open Graph Image URL is weird."
+msgstr "La URL de la imagen Open Graph es rara."
+
+#: ../framework/admin/class-social.php:68
+msgid "Facebook App ID"
+msgstr "Facebook App ID"
+
+#: ../framework/admin/class-social.php:71
+#: ../framework/admin/class-social.php:82
+msgid ""
+"If you have a Facebook page for your business, add that URL here and link it "
+"on your Facebook page."
+msgstr ""
+"Si tienes una página de Facebook para tu negocio, añade aquí la URL y se "
+"enlazará tu sitio a tu página de Facebook."
+
+#: ../framework/admin/class-social.php:74
+msgid "Facebook App ID is weird."
+msgstr "Facebook App ID es raro."
+
+#: ../framework/admin/class-social.php:79
+msgid "Facebook Page"
+msgstr "Página de Facebook"
+
+#: ../framework/admin/class-social.php:85
+msgid "Facebook Publisher URL is weird."
+msgstr "La URL de la página de Facebook es rara."
+
+#: ../framework/admin/class-social.php:90
+msgid "Facebook Author Page"
+msgstr "Página de Facebook del autor"
+
+#: ../framework/admin/class-social.php:93
+msgid ""
+"If you have a Facebook profile, add that URL here and link it on your "
+"Facebook page's about page."
+msgstr ""
+"Si tienes un perfil de Facebook, añade aquí la URL y se enlazará tu sitio a "
+"tu perfil de Facebook."
+
+#: ../framework/admin/class-social.php:96
+msgid "Facebook Author URL is weird."
+msgstr "La URL de la página de Facebook del autor es raro."
+
+#: ../framework/admin/class-social.php:103
+msgid "Add Twitter meta data?"
+msgstr "¿Añadir metadatos de Twitter?"
+
+#: ../framework/admin/class-social.php:106
+msgid "Add Twitter meta data to your site's <code>&lt;head&gt;</code> section."
+msgstr ""
+"Añade metadatos de Twitter a la sección <code>&lt;head&gt;</code> de tu "
+"página. "
+
+#: ../framework/admin/class-social.php:107
+msgid ""
+"Note that for the Twitter Cards to work, you have to check the box and then "
+"<a target=\"_blank\" href=\"https://dev.twitter.com/docs/cards/validation/"
+"validator\">validate your Twitter Cards</a>."
+msgstr ""
+"Tenga en cuenta que para las tarjetas de Twitter funcione, tiene que marcar "
+"la casilla y luego <a target=\"_blank\" href=\"https://dev.twitter.com/docs/"
+"cards/validation/validator\">validar sus tarjetas de Twitter</a>."
+
+#: ../framework/admin/class-social.php:109
+msgid "Twitter Checkbox failed because of yes."
+msgstr "La casilla de validación de Twitter falló porque sí."
+
+#: ../framework/admin/class-social.php:114
+msgid "Site Twitter Username"
+msgstr "Cuenta de Twitter del sitio"
+
+#: ../framework/admin/class-social.php:122
+#: ../framework/admin/class-social.php:141
+#: ../framework/admin/class-social.php:164
+msgid "Google+ Publisher URL is weird."
+msgstr "La URL de la página de Google+ Publisher es rara."
+
+#: ../framework/admin/class-social.php:127
+msgid "The default card type to use"
+msgstr "Tipo de tarjeta por defecto"
+
+#: ../framework/admin/class-social.php:132
+msgid "Summary"
+msgstr "Summary"
+
+#: ../framework/admin/class-social.php:133
+msgid "Summary with Large Image"
+msgstr "Summary with Large Image"
+
+#: ../framework/admin/class-social.php:148
+msgid "Add Google+ meta data?"
+msgstr "¿Añadir metadatos de Google+?"
+
+#: ../framework/admin/class-social.php:151
+msgid "Add Schema meta data to your site's <code>&lt;head&gt;</code> section."
+msgstr ""
+"Añade metadatos de Schema a la sección <code>&lt;head&gt;</code> de tu "
+"página. "
+
+#: ../framework/admin/class-social.php:153
+msgid "Google+ Checkbox failed because of yes."
+msgstr "La casilla de validación de Google+ falló porque sí."
+
+#: ../framework/admin/class-social.php:158
+msgid "Google+ Publisher Page"
+msgstr "Página de Google+ Publisher"
+
+#: ../framework/admin/class-social.php:161
+msgid ""
+"If you have a Google+ page for your business, add that URL here and link it "
+"on your Google+ page's about page."
+msgstr ""
+"Si tienes una página de Google+ para tu negocio, añade aquí la URL y se "
+"enlazará tu sitio con tu página de Google+."
+
+#: ../framework/admin/class-social.php:169
+msgid "Google+ Author Page"
+msgstr "Página de Google+ del autor"
+
+#: ../framework/admin/class-social.php:172
+msgid ""
+"If you have a Google+ profile, add that URL here and link it on your Google+ "
+"page's about page."
+msgstr ""
+"Si tienes un perfil de Google+, añade aquí la URL y se enlazará tu sitio a "
+"tu perfil de Google+."
+
+#: ../framework/admin/class-social.php:175
+msgid "Google+ Author URL is weird."
+msgstr "La URL de la Página Google+ del autor es rara."
+
+#: ../framework/admin/class-social.php:192
+msgid "Alisios: Social"
+msgstr "Alisios: Social"
+
+#: ../framework/admin/class-social.php:192
+msgid "Social"
+msgstr "Social"
+
+#: ../framework/functions-head.php:135
+msgid "Tag: "
+msgstr "Etiqueta: "
+
+#: ../framework/functions-head.php:137
+msgid "Category: "
+msgstr "Categoría: "
+
+#: ../framework/functions-head.php:149
+#, php-format
+msgid "Page %s"
+msgstr "Página %s"
+
+#: ../framework/functions-head.php:169
+msgid "Search results in "
+msgstr "Resultados de la búsqueda en "
+
+#: ../framework/functions-sidebar.php:11
 msgid "Sidebar"
 msgstr "Barra lateral"
 
-#: ../framework/alisios-functions-setup.php:28
+#: ../framework/functions-sidebar.php:21
 msgid "Footer #1"
 msgstr "Pie de página #1"
 
-#: ../framework/alisios-functions-setup.php:37
+#: ../framework/functions-sidebar.php:30
 msgid "Footer #2"
 msgstr "Pie de página #2"
 
-#: ../framework/alisios-functions-setup.php:46
+#: ../framework/functions-sidebar.php:39
 msgid "Footer #3"
 msgstr "Pie de página #3"
 
-#: ../loop-empty.php:9
+#: ../loop-empty.php:19
 msgid "Nothing Found"
 msgstr "Nada encontrado"
 
-#: ../loop-empty.php:15
+#: ../loop-empty.php:31
 msgid ""
 "Apologies, but no results were found for the requested archive. Perhaps "
 "searching will help find a related post."
@@ -91,7 +287,7 @@ msgstr ""
 "Lo sentimos, pero no se han encontrado resultados de las entradas "
 "solicitadas. Quizás buscando ayudará a encontrar una entrada relacionada."
 
-#: ../search.php:10
+#: ../search.php:16
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Resultados de la búsqueda: %s"
