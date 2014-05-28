@@ -130,6 +130,12 @@ class AlisiosFunctionsHead {
         if ( is_feed() )
             return $title;
 
+        // Set decent title for taxonomy pages
+        if( is_tag() )
+            $title = apply_filters('alisios_title_tag', __('Tag: ', ALISIOS_I18N)) . $title;
+        elseif( is_category() )
+            $title = apply_filters('alisios_title_category', __('Category: ', ALISIOS_I18N)) . $title;
+
         // Add the site name.
         $title .= get_bloginfo( 'name' );
 
