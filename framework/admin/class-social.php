@@ -91,7 +91,7 @@ class AlisiosAdminSocial {
                 'section'   => $this->sections['Facebook']['id'],
                 'type'      => 'textinput',
                 'desc'      => __('If you have a Facebook profile, add that URL here and link it on your Facebook page\'s about page.', ALISIOS_I18N),
-                'placeholder' => 'https://plus.google.com/[Facebook_Profile]]',
+                'placeholder' => 'https://plus.google.com/[Facebook_Profile]',
                 //sanitize
                 'error'     => __('Facebook Author URL is weird.', ALISIOS_I18N),
             ),
