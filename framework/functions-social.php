@@ -17,8 +17,6 @@ class AlisiosFunctionsSocial {
             && empty($socialOptions['use_facebook']))
             return;
 
-        //var_dump($socialOptions);
-
         $socialTags = array();
 
         $socialTitle        = wp_title( '/', false, 'right' );
@@ -124,9 +122,21 @@ class AlisiosFunctionsSocial {
         }
         echo '<!-- /Alisios Social -->' . "\n";
     }
+
+    /*
+     * Social Image
+     */
+    public static function social_image( $image ) {
+        //Maybe Thumbnail
+        //Maybe Attachment
+        return $image;
+    }
 }
 
 function alisios_social_image() {
 
-    return '';
+    $socialOptions = get_option('alisios_social', []);
+    $socialImage = isset($socialOptions['opengraph_default_image']) ? $socialOptions['opengraph_default_image'] : '';
+
+    return apply_filters('alisios_social_default_image', $socialImage);
 }
