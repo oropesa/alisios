@@ -44,74 +44,11 @@ class AlisiosFunctionsHead {
     /**
      * Canonical Link
      */
-    public static function canonical($display = true) {
-        $canonical = false;
-        // Set decent canonicals for homepage, singulars and taxonomy pages
-        if( is_singular() ) {
-            $obj       = get_queried_object();
-            $canonical = get_permalink( $obj->ID );
-        }
-        elseif( is_search() ) {
-            $canonical = get_search_link();
-        }
-        elseif( is_front_page() ) {
-            $canonical = home_url( '/' );
-        }
-        elseif( is_home() && 'page' == get_option('show_on_front') ) {
-            $canonical = get_permalink(get_option('page_for_posts'));
-        }
-        elseif( is_tax() || is_tag() || is_category() ) {
-            $term = get_queried_object();
-            $canonical = get_term_link($term, $term->taxonomy);
-        }
-        elseif( is_post_type_archive() ) {
-            $post_type = get_query_var('post_type');
-            if( is_array($post_type) ) {
-                $post_type = reset( $post_type );
-            }
-            $canonical = get_post_type_archive_link( $post_type );
-        }
-        elseif( is_author() ) {
-            $canonical = get_author_posts_url( get_query_var('author'), get_query_var('author_name') );
-        }
-        elseif( is_archive() ) {
-            if( is_date() ) {
-                if( is_day() ) {
-                    $canonical = get_day_link( get_query_var('year'), get_query_var('monthnum'), get_query_var('day') );
-                }
-                elseif( is_month() ) {
-                    $canonical = get_month_link( get_query_var('year'), get_query_var('monthnum') );
-                } elseif( is_year() ) {
-                    $canonical = get_year_link( get_query_var('year') );
-                }
-            }
-        }
-
-        //avoid pagination
-        if( $canonical && get_query_var('paged') > 1 ) {
-            global $wp_rewrite;
-            if( !$wp_rewrite->using_permalinks() ) {
-                $canonical = add_query_arg( 'paged', get_query_var('paged'), $canonical );
-            }
-            else {
-                if( is_front_page() ) {
-                    $base      = $wp_rewrite->using_index_permalinks() ? 'index.php/' : '/';
-                    $canonical = home_url( $base );
-                }
-                $canonical = user_trailingslashit( trailingslashit($canonical) . trailingslashit($wp_rewrite->pagination_base) . get_query_var('paged') );
-            }
-        }
-
-        //filter
-        $canonical = apply_filters( 'alisios_link_canonical', $canonical );
-
+    public static function canonical() {
+        $canonical = AlisiosFunctionsSocial::canonical();
         //print
-        if( $display ) {
-            if ( is_string($canonical) && !empty($canonical) ) {
-                echo '<link rel="canonical" href="' . esc_url( $canonical, null, 'other' ) . '" />' . "\n";
-            }
-        } else {
-            return $canonical;
+        if ( is_string($canonical) && !empty($canonical) ) {
+            echo '<link rel="canonical" href="' . esc_url( $canonical, null, 'other' ) . '" />' . "\n";
         }
     }
 

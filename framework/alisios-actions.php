@@ -13,7 +13,8 @@ add_action('alisios_html_before',       array('AlisiosFunctionsHead',   'doctype
 add_filter('language_attributes',       array('AlisiosFunctionsHead',   'add_html_namespace'));
 
 add_action('alisios_head_top',          array('AlisiosFunctionsHead',   'metas_top'));
-add_action('alisios_head_bottom',       array('AlisiosFunctionsHead',   'canonical'));
+add_action('alisios_head_bottom',       array('AlisiosFunctionsHead',   'canonical'), 10, 1);
+remove_action('wp_head',                'rel_canonical' );
 
 add_action('alisios_head_bottom',       array('AlisiosFunctionsSocial', 'social_tags'));
 
