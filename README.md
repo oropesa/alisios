@@ -120,3 +120,7 @@ Gestiona carruseles de imágenes
 ## Entradas relacionadas
 
 Muestras entradas relacionadas en cada entrada según categorías y tags.
+
+## Enlaces de Compartir en redes sociales
+
+Debajo de cada entrada se facilitan las distintas redes sociales para compartir
