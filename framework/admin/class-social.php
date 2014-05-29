@@ -50,28 +50,6 @@ class AlisiosAdminSocial {
                 'error'     => __('Open Graph Facebook Checkbox failed because of yes.', ALISIOS_I18N),
             ),
 
-            'opengraph_default_image' => array(
-                'id'        => 'opengraph_default_image',
-                'label'     => __('Default Open Graph Image URL', ALISIOS_I18N),
-                'section'   => $this->sections['Facebook']['id'],
-                'type'      => 'textinput',
-                'desc'      => __('This image is used if the page being shared does not contain any images.', ALISIOS_I18N),
-                'placeholder' => 'http://mysite.com/wp-content/uploads/default-image.png',
-                //sanitize
-                'error'     => __('Open Graph Image URL is weird.', ALISIOS_I18N),
-            ),
-
-            'facebook_app_id' => array(
-                'id'        => 'facebook_app_id',
-                'label'     => __('Facebook App ID', ALISIOS_I18N),
-                'section'   => $this->sections['Facebook']['id'],
-                'type'      => 'textinput',
-                'desc'      => __('If you have a Facebook page for your business, add that URL here and link it on your Facebook page.', ALISIOS_I18N),
-                'placeholder' => '123456789012345',
-                //sanitize
-                'error'     => __('Facebook App ID is weird.', ALISIOS_I18N),
-            ),
-
             'facebook_publisher' => array(
                 'id'        => 'facebook_publisher',
                 'label'     => __('Facebook Page', ALISIOS_I18N),
@@ -92,6 +70,28 @@ class AlisiosAdminSocial {
                 'placeholder' => 'https://plus.google.com/[Facebook_Profile]',
                 //sanitize
                 'error'     => __('Facebook Author URL is weird.', ALISIOS_I18N),
+            ),
+
+            'facebook_app_id' => array(
+                'id'        => 'facebook_app_id',
+                'label'     => __('Facebook App ID', ALISIOS_I18N),
+                'section'   => $this->sections['Facebook']['id'],
+                'type'      => 'textinput',
+                'desc'      => __('If you have a Facebook page for your business, add that URL here and link it on your Facebook page.', ALISIOS_I18N),
+                'placeholder' => '123456789012345',
+                //sanitize
+                'error'     => __('Facebook App ID is weird.', ALISIOS_I18N),
+            ),
+
+            'opengraph_default_image' => array(
+                'id'        => 'opengraph_default_image',
+                'label'     => __('Default Open Graph Image URL', ALISIOS_I18N),
+                'section'   => $this->sections['Facebook']['id'],
+                'type'      => 'textinput',
+                'desc'      => __('This image is used if the page being shared does not contain any images.', ALISIOS_I18N),
+                'placeholder' => 'http://mysite.com/wp-content/uploads/default-image.png',
+                //sanitize
+                'error'     => __('Open Graph Image URL is weird.', ALISIOS_I18N),
             ),
 
             //TWITTER
