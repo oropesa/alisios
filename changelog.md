@@ -1,5 +1,13 @@
 # Alisios changelog
 
+## 02.06.2014 - 0.5.0
+* Add modernizr.js, but not implement
+* Add doctype and basic metatags in head
+* Add facebook, google+ and twitter metatags in head
+* Add title, description and canonical metatag in head
+* Add social metatags manage panel in admin zone
+* Update translation
+* Define short and medium term objectives
 
 ## 08.05.2014 - 0.4.1
 * Add content_class, sidebar_class, site_class in templates
