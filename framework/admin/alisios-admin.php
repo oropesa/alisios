@@ -42,7 +42,7 @@ class AlisiosAdmin {
     /**
      * Create a Text input field.
      */
-    public static function textinput($var, $label, $option, $placeholder = '', $is_addon = false, $is_addon_left = false) {
+    public static function textinput($var, $label, $option, $placeholder = '', $is_addon = false, $is_addon_left = false, $extra = '') {
         $options = get_option($option);
         $val     = (isset($options[$var])) ? $options[$var] : '';
 
@@ -57,13 +57,15 @@ class AlisiosAdmin {
 
         $output_input = '<input class="textinput' . $class . '" type="text" id="' . esc_attr($var) . '" name="' . esc_attr($option) . '[' . esc_attr($var) . ']" value="' . esc_attr($val) . '" ' . $placeholder . '/>';
 
+        $outputextra = !empty($extra) ? '<p>' . $extra . '</p>' : '';
+
         if($is_addon_left) {
             $output = $output_label . $output_input;
         } else {
             $output = $output_input . $output_label;
         }
 
-        print $output;
+        print $output . $outputextra;
     }
 
     /**

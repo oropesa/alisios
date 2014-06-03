@@ -40,4 +40,5 @@ add_action('alisios_footer_in',         array('AlisiosFunctionsFooter', 'widget'
  */
 if(is_admin() ) {
     $AlisiosAdminSocial = new AlisiosAdminSocial();
+    $AlisiosAdminSeoConnection = new AlisiosAdminSeoConnection();
 }

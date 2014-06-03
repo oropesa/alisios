@@ -41,6 +41,7 @@ require_once( ALISIOS_DIR_FRAMEWORK . '/alisios-hooks.php' );
 // ~~ LOAD ADMIN FUNCTIONS
 require_once( ALISIOS_DIR_ADMIN . '/alisios-admin.php' );
 require_once( ALISIOS_DIR_ADMIN . '/class-social.php' );
+require_once( ALISIOS_DIR_ADMIN . '/class-seoconnection.php' );
 
 // ~~ LOAD ACTIONS
 
