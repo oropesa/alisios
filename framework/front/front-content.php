@@ -1,7 +1,6 @@
 <?php
 
-class AlisiosFunctionsContent {
-
+class AlisiosFrontContent {
 
 }
 

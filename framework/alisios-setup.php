@@ -1,6 +1,6 @@
 <?php
 
-class AlisiosFunctionsSetup {
+class AlisiosFrontSetup {
 
     /*
      * LANGUAGES

@@ -1,7 +1,10 @@
 <?php
 
-class AlisiosFunctionsHeader {
+class AlisiosFrontHeader {
 
+    /*
+     * Site Title & Description template
+     */
     public static function site() {
         ?>
 

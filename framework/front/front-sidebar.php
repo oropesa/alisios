@@ -1,9 +1,9 @@
 <?php
 
-class AlisiosFunctionsSidebar {
+class AlisiosFrontSidebar {
 
     /*
-     * Setup
+     * Setup (Front & Admin)
      */
     public static function register_sidebars() {
         // The Sidebar

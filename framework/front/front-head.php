@@ -1,5 +1,5 @@
 <?php
-class AlisiosFunctionsHead {
+class AlisiosFrontHead {
 
     /**
      * Doctype HTML5
@@ -25,41 +25,9 @@ class AlisiosFunctionsHead {
     }
 
     /**
-     * Filter for the namespace, adding the OpenGraph namespace.
-     * @link https://developers.facebook.com/docs/web/tutorials/scrumptious/open-graph-object/
-     * @link https://developers.google.com/+/web/snippet/
-     * @param string $input The language_attributes filter
-     * @return string
-     */
-    public static function add_html_namespace( $input ) {
-        //OpenGraph - Facebook
-        $input .= ' prefix="og: http://ogp.me/ns#"';
-        //Schema - Google+
-        $schemaType = apply_filters('alisios_html_schema_type', 'Blog');
-        $input .= ' itemscope itemtype="http://schema.org/' . $schemaType . '"';
-
-        return $input;
-    }
-
-    /**
-     * Canonical Link
-     */
-    public static function canonical() {
-        $canonical = AlisiosFunctionsSocial::canonical();
-        //print
-        if ( is_string($canonical) && !empty($canonical) ) {
-            echo '<link rel="canonical" href="' . esc_url( $canonical, null, 'other' ) . '" />' . "\n";
-        }
-    }
-
-    /**
      * Filter
      * Creates a nicely formatted and more specific title element text
      * for output in head of document, based on current view. Twenty Twelve 1.0
-     *
-     * @param string $title Default title text for current view.
-     * @param string $sep Optional separator.
-     * @return string Filtered title.
      */
     public static function wp_title( $title, $sep ) {
         global $paged, $page;
@@ -128,8 +96,18 @@ class AlisiosFunctionsHead {
         return $description;
     }
 
+    /**
+     * Canonical Link template
+     */
+    public static function canonical() {
+        $canonical = AlisiosFrontSocial::canonical();
+        //print
+        if ( is_string($canonical) && !empty($canonical) ) {
+            echo '<link rel="canonical" href="' . esc_url( $canonical, null, 'other' ) . '" />' . "\n";
+        }
+    }
+
     /*
-     * LESS
      * Load style.css or less.css, depend of var ALISIOS_USE_LESS
      */
     public static function enqueue_stylesheet() {
@@ -143,7 +121,7 @@ class AlisiosFunctionsHead {
     }
 
     /*
-     * Load JS and CSS libraries (JS on the bottom)
+     * Load JS (on the bottom) and CSS libraries (on the head)
      */
     public static function enqueue_scripts_and_stylesheet() {
         //enqueue style
@@ -153,8 +131,8 @@ class AlisiosFunctionsHead {
     }
 
     /*
-     * LESS
-     * Rebuild link stylesheet to less format in wp_enqueue_styles
+     * Filter
+     * Rebuild link stylesheet to LESS format in wp_enqueue_styles
      */
     public static function wp_enqueue_styles_less($tag, $handle) {
         global $wp_styles;
@@ -171,6 +149,9 @@ class AlisiosFunctionsHead {
     }
 }
 
+/*
+ * Description template
+ */
 function alisios_description( $display = true ) {
     $description = apply_filters('alisios_description', get_bloginfo('description'));
     if( $display && !empty($description) )

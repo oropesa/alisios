@@ -1,8 +1,10 @@
 <?php
 
-class AlisiosFunctionsFooter {
+class AlisiosFrontFooter {
 
-
+    /*
+     * Credit template
+     */
     public static function credits() {
         ?>
         <div <?php footer_class('credits'); ?>>
@@ -11,6 +13,9 @@ class AlisiosFunctionsFooter {
         <?php
     }
 
+    /*
+     * Widgets template
+     */
     public static function widget() {
         ?>
         <div <?php footer_class('footer-widgets'); ?>>
