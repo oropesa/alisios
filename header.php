@@ -16,6 +16,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <?php AlisiosHooks::body_top(); ?>
 
 <div class="outer-wrap">
@@ -30,7 +31,7 @@
 
             <?php AlisiosHooks::header_top(); ?>
 
-            <div class="container">
+            <div class="header-container container">
 
                 <?php AlisiosHooks::header_site_before(); ?>
 
@@ -50,4 +51,8 @@
 
         <?php AlisiosHooks::header_after(); ?>
 
-        <div id="page" class="content-wrapper container">
+        <div id="page" class="content-wrapper">
+
+            <?php AlisiosHooks::content_wrapper_top(); ?>
+
+            <div class="content-container container">

@@ -171,6 +171,15 @@ class AlisiosHooks {
     /**
      * Alisios CONTENT
      */
+
+    public static function content_wrapper_top() {
+        do_action( 'alisios_content_wrapper_top' );
+    }
+
+    public static function content_wrapper_bottom() {
+        do_action( 'alisios_content_wrapper_bottom' );
+    }
+
     public static function content_before() {
         do_action( 'alisios_content_before' );
         tha_content_before();

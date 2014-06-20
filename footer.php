@@ -1,5 +1,9 @@
 <?php if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
 
+            </div><!-- /.content-container -->
+
+            <?php AlisiosHooks::content_wrapper_bottom(); ?>
+
         </div><!-- /.content-wrapper -->
 
         <?php AlisiosHooks::footer_before(); ?>
@@ -8,7 +12,7 @@
 
             <?php AlisiosHooks::footer_top(); ?>
 
-            <div class="footer-content container">
+            <div class="footer-container container">
 
                 <?php AlisiosHooks::footer_in(); ?>
 
