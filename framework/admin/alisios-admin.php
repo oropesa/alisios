@@ -2,23 +2,11 @@
 class AlisiosAdmin {
 
     /*
-     * ENQUEUE ADMIN STYLE
+     * TEMPLATES
      */
-    public function admin_enqueue_style_and_script() {
-        //less || css
-        if(ALISIOS_USE_LESS) {
-            wp_enqueue_style('alisios-style', ALISIOS_URL_LESS  . '/alisios-admin/alisios-admin.less');
-            wp_enqueue_script('alisios-less', ALISIOS_URL_JS_LIB . '/less.min.js');
-        } else {
-            wp_enqueue_style('alisios_admin_style', ALISIOS_URL_CSS . '/alisios-admin.css');
-        }
-
-        //js
-        wp_enqueue_script('alisios_admin_script', ALISIOS_URL_JS . '/alisios-admin.js', array('jquery'), false, true);
-    }
 
     /**
-     * Create a Checkbox input field.
+     * checkbox input field template
      */
     public static function checkbox($var, $label, $option, $is_label_left = false, $desc = '') {
         $options = get_option($option);
@@ -40,7 +28,7 @@ class AlisiosAdmin {
     }
 
     /**
-     * Create a Text input field.
+     * Text input field template
      */
     public static function textinput($var, $label, $option, $placeholder = '', $is_addon = false, $is_addon_left = false, $extra = '') {
         $options = get_option($option);
@@ -69,7 +57,7 @@ class AlisiosAdmin {
     }
 
     /**
-     * Create a Select Box.
+     * Select Box template
      */
     public static function select( $var, $label, $option, $values = array() ) {
         $options = get_option($option);

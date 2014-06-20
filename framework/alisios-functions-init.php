@@ -39,9 +39,10 @@ require_once( ALISIOS_DIR_FRONT . '/front-footer.php'   );
 require_once( ALISIOS_DIR_FRONT . '/front-social.php'   );
 
 // ~~ LOAD ADMIN FUNCTIONS
-require_once( ALISIOS_DIR_ADMIN . '/alisios-admin.php'      );
-require_once( ALISIOS_DIR_ADMIN . '/class-social.php'       );
-require_once( ALISIOS_DIR_ADMIN . '/class-seoconnection.php');
+require_once( ALISIOS_DIR_ADMIN . '/alisios-admin.php'          );
+require_once( ALISIOS_DIR_ADMIN . '/class-alisios-template.php' );
+require_once( ALISIOS_DIR_ADMIN . '/class-social.php'           );
+require_once( ALISIOS_DIR_ADMIN . '/class-seoconnection.php'    );
 
 // ~~ LOAD ACTIONS
 
