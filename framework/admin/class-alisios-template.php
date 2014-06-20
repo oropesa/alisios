@@ -136,7 +136,7 @@ class AlisiosAdminClassTemplate {
         ?>
         <div class="wrap alisios-admin-page <?php echo $this->opt_name; ?>-page">
 
-            <?php $div_icon = !empty($opt_icon) ? '<div class="dashicons ' . $this->opt_icon . '"></div> ' : ''; ?>
+            <?php $div_icon = !empty($this->opt_icon) ? '<div class="dashicons ' . $this->opt_icon . '"></div> ' : ''; ?>
             <h2 class="alisios-title"><?php echo $div_icon . esc_html( get_admin_page_title() ); ?></h2>
 
             <form action="<?php echo esc_url(admin_url('options.php')); ?>" method="post" id="alisios-conf" class="alisios_content_wrapper" accept-charset="<?php echo esc_attr(get_bloginfo('charset')); ?>">
