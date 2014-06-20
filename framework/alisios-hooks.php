@@ -290,6 +290,24 @@ class AlisiosHooks {
         tha_sidebar_bottom();
     }
 
+    /**
+     * Alisios FOOTER SIDEBAR
+     */
+    public static function sidebar_footer_content_before() {
+        do_action( 'alisios_sidebar_footer_content_before' );
+    }
+
+    public static function sidebar_footer_content_after() {
+        do_action( 'alisios_sidebar_footer_content_after' );
+    }
+
+    public static function sidebar_footer_content_top() {
+        do_action( 'alisios_sidebar_footer_content_top' );
+    }
+
+    public static function sidebar_footer_content_bottom() {
+        do_action( 'alisios_sidebar_footer_content_bottom' );
+    }
 
     /**
      * Alisios FOOTER

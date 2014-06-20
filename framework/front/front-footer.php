@@ -18,29 +18,45 @@ class AlisiosFrontFooter {
      */
     public static function widget() {
         ?>
-        <div <?php footer_class('footer-widgets'); ?>>
-            <?php
-            if( is_active_sidebar('footer-sidebar-1')
-                || is_active_sidebar('footer-sidebar-2')
-                || is_active_sidebar('footer-sidebar-3') ) {
-                ?>
+        <div class="footer-widgets">
 
-                <div class="footer-sidebar col-xs-12 col-sm-4">
-                    <?php dynamic_sidebar( 'footer-sidebar-1' ); ?>
-                </div>
+            <?php AlisiosHooks::sidebar_footer_content_before(); ?>
 
-                <div class="footer-sidebar col-xs-12 col-sm-4">
-                    <?php dynamic_sidebar( 'footer-sidebar-2' ); ?>
-                </div>
+            <div class="footer-container container">
 
-                <div class="footer-sidebar col-xs-12 col-sm-4">
-                    <?php dynamic_sidebar( 'footer-sidebar-3' ); ?>
-                </div>
+                <?php AlisiosHooks::sidebar_footer_content_top(); ?>
 
-            <?php
-            }
-            ?>
-        </div>
+                <div <?php footer_class('footer-content'); ?>>
+                    <?php
+                    if( is_active_sidebar('footer-sidebar-1')
+                        || is_active_sidebar('footer-sidebar-2')
+                        || is_active_sidebar('footer-sidebar-3') ) {
+                        ?>
+
+                        <div class="footer-sidebar col-xs-12 col-sm-4">
+                            <?php dynamic_sidebar( 'footer-sidebar-1' ); ?>
+                        </div>
+
+                        <div class="footer-sidebar col-xs-12 col-sm-4">
+                            <?php dynamic_sidebar( 'footer-sidebar-2' ); ?>
+                        </div>
+
+                        <div class="footer-sidebar col-xs-12 col-sm-4">
+                            <?php dynamic_sidebar( 'footer-sidebar-3' ); ?>
+                        </div>
+
+                    <?php
+                    }
+                    ?>
+                </div><!-- ./footer-content -->
+
+                <?php AlisiosHooks::sidebar_footer_content_bottom(); ?>
+
+            </div><!-- ./footer-container -->
+
+            <?php AlisiosHooks::sidebar_footer_content_after(); ?>
+
+        </div><!-- ./footer-widgets -->
         <?php
     }
 
@@ -57,7 +73,7 @@ function footer_class( $class = '' ) {
 function get_footer_class( $class = '' ) {
     $classes = array();
 
-    $classes[] = 'footer';
+    $classes[] = 'footer-content';
     $classes[] = 'col-xs-12';
     $classes[] = 'col-sm-12';
 

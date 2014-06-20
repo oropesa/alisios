@@ -32,8 +32,8 @@ add_action('alisios_header_site_in',    array('AlisiosFrontHeader', 'site'));
 /*
  * FOOTER
  */
+add_action('alisios_footer_before',     array('AlisiosFrontFooter', 'widget'),  10);
 add_action('alisios_footer_in',         array('AlisiosFrontFooter', 'credits'), 20);
-add_action('alisios_footer_in',         array('AlisiosFrontFooter', 'widget'),  10);
 
 /*
  * ADMIN
