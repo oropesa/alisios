@@ -26,21 +26,22 @@ define( 'ALISIOS_DIR_INC',       ALISIOS_DIR_FRAMEWORK . '/includes' );
 define( 'ALISIOS_DIR_FRONT',     ALISIOS_DIR_FRAMEWORK . '/front'    );
 define( 'ALISIOS_DIR_ADMIN',     ALISIOS_DIR_FRAMEWORK . '/admin'    );
 
-// ~~ LOAD FRONT FUNCTIONS
+// ~~ LOAD HOOKS
 
 require_once( ALISIOS_DIR_FRAMEWORK . '/alisios-hooks.php'  );
-require_once( ALISIOS_DIR_FRAMEWORK . '/alisios-setup.php'  );
 
-require_once( ALISIOS_DIR_FRONT . '/front-head.php'     );
-require_once( ALISIOS_DIR_FRONT . '/front-header.php'   );
-require_once( ALISIOS_DIR_FRONT . '/front-content.php'  );
-require_once( ALISIOS_DIR_FRONT . '/front-sidebar.php'  );
-require_once( ALISIOS_DIR_FRONT . '/front-footer.php'   );
-require_once( ALISIOS_DIR_FRONT . '/front-social.php'   );
+// ~~ LOAD FRONT FUNCTIONS
+require_once( ALISIOS_DIR_FRONT . '/front-setup.php' );
+require_once( ALISIOS_DIR_FRONT . '/front-head.php' );
+require_once( ALISIOS_DIR_FRONT . '/front-header.php' );
+require_once( ALISIOS_DIR_FRONT . '/front-content.php' );
+require_once( ALISIOS_DIR_FRONT . '/front-sidebar.php' );
+require_once( ALISIOS_DIR_FRONT . '/front-social.php' );
+require_once( ALISIOS_DIR_FRONT . '/front-footer.php' );
 
 // ~~ LOAD ADMIN FUNCTIONS
-require_once( ALISIOS_DIR_ADMIN . '/alisios-admin.php'          );
 require_once( ALISIOS_DIR_ADMIN . '/class-alisios-template.php' );
+
 require_once( ALISIOS_DIR_ADMIN . '/class-social.php'           );
 require_once( ALISIOS_DIR_ADMIN . '/class-seoconnection.php'    );
 
