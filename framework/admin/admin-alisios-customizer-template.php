@@ -159,6 +159,16 @@ class AlisiosAdminCustomizerTemplate {
                         'settings'   => $entireID,
                     ));
                     break;
+                case 'textinput' :
+                    $wp_customize->add_control(
+                        new Alisios_Customize_Text_Control($wp_customize, $field['id'], array(
+                        'label'      => $field['label'],
+                        'section'    => $field['section'],
+                        'type'       => $field['type'],
+                        'settings'   => $entireID,
+                        ))
+                    );
+                    break;
                 case 'checkbox' :
                     $wp_customize->add_control($entireID, array(
                         'label'      => $field['label'],
@@ -179,6 +189,7 @@ class AlisiosAdminCustomizerTemplate {
  * Type: Radio Position, 3x3 table
  */
 if( class_exists ('WP_Customize_Control') ) :
+
     class Alisios_Customize_Radio_Position_Control extends WP_Customize_Control {
         public $type = 'radio-position';
 
@@ -211,4 +222,18 @@ if( class_exists ('WP_Customize_Control') ) :
             <?php
         }
     }
+
+    class Alisios_Customize_Text_Control extends WP_Customize_Control {
+        public $type = 'textinput';
+
+        public function render_content() {
+            ?>
+            <label>
+                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+                <input type="text" placeholder="<?php echo $this->settings['default']->default ?>" value="<?php echo esc_attr( $this->value() ); ?>" <?php $this->link(); ?> />
+            </label>
+            <?php
+        }
+    }
+
 endif;
