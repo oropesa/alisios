@@ -335,6 +335,13 @@ class AlisiosHooks {
     public static function footer_in() {
         do_action( 'alisios_footer_in' );
     }
+
+    /**
+     * Alisios CUSTOMIZER
+     */
+    public static function customizer_render() {
+        do_action( 'alisios_customizer_render' );
+    }
 }
 
 /**
