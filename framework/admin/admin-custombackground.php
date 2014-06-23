@@ -21,6 +21,14 @@ class AlisiosAdminCustomizerBackground extends AlisiosAdminCustomizerTemplate {
                 'default'   => '#fcfcfc',
             ),
 
+            'backgroundImage' => array(
+                'id'        => 'custom_background_image',
+                'label'     => __('Background Image', ALISIOS_I18N),
+                'section'   => $this->sections['customBackground']['id'],
+                'type'      => 'image',
+                'default'   => '',
+            ),
+
             'repeatBackgroundX' => array(
                 'id'        => 'repeat_custom_background_image_x',
                 'label'     => __('Repeat background horizontally?', ALISIOS_I18N),
@@ -53,14 +61,6 @@ class AlisiosAdminCustomizerBackground extends AlisiosAdminCustomizerTemplate {
                     'center bottom' => '',
                     'right bottom' => '',
                 ),
-            ),
-
-            'backgroundImage' => array(
-                'id'        => 'custom_background_image',
-                'label'     => __('Background Image', ALISIOS_I18N),
-                'section'   => $this->sections['customBackground']['id'],
-                'type'      => 'image',
-                'default'   => '',
             ),
 
         );
