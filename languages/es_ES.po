@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Alisios\n"
-"POT-Creation-Date: 2014-06-23 13:33-0000\n"
-"PO-Revision-Date: 2014-06-23 13:34-0000\n"
+"POT-Creation-Date: 2014-06-23 14:51-0000\n"
+"PO-Revision-Date: 2014-06-23 14:51-0000\n"
 "Last-Translator: Carlos Oropesa <carlos@oropensando.com>\n"
 "Language-Team: oropensando.com <carlos@oropensando.com>\n"
 "Language: es_ES\n"
@@ -64,7 +64,7 @@ msgid "Archives"
 msgstr "Entradas"
 
 #: ../framework/admin/admin-custombackground.php:10
-#: ../framework/admin/admin-custombackground.php:50
+#: ../framework/admin/admin-custombackground.php:60
 msgid "Background Image"
 msgstr "Imagen de Fondo"
 
@@ -81,8 +81,8 @@ msgid "Repeat background vertically?"
 msgstr "¿Repetir el fondo verticalmente?"
 
 #: ../framework/admin/admin-custombackground.php:42
-msgid "Center background?"
-msgstr "¿Centrar Fondo?"
+msgid "Position background image"
+msgstr "Posición de la imagen de fondo"
 
 #: ../framework/admin/admin-seoconnection.php:14
 msgid "Webmaster Tools"
@@ -395,3 +395,6 @@ msgstr "Búsqueda&hellip;"
 #: ../searchform.php:8
 msgid "Search"
 msgstr "Búsqueda"
+
+#~ msgid "Center background?"
+#~ msgstr "¿Centrar Fondo?"
