@@ -39,6 +39,7 @@ add_action('alisios_footer_in',         array('AlisiosFrontFooter', 'credits'), 
  * ADMIN
  */
 if(is_admin() ) {
-    $AlisiosAdminSocial = new AlisiosAdminSocial();
-    $AlisiosAdminSeoConnection = new AlisiosAdminSeoConnection();
+    $AlisiosAdminSocial         = new AlisiosAdminSocial();
+    $AlisiosAdminSeoConnection  = new AlisiosAdminSeoConnection();
+    $AlisiosAdminWPAdminBar     = new AlisiosAdminWPAdminBar();
 }
