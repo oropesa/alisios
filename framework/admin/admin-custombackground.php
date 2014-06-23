@@ -38,11 +38,21 @@ class AlisiosAdminCustomizerBackground extends AlisiosAdminCustomizerTemplate {
             ),
 
             'centerBackground' => array(
-                'id'        => 'align_center_custom_background_image',
-                'label'     => __('Center background?', ALISIOS_I18N),
+                'id'        => 'align_custom_background_image',
+                'label'     => __('Position background image', ALISIOS_I18N),
                 'section'   => $this->sections['customBackground']['id'],
-                'type'      => 'checkbox',
-                'default'   => '',
+                'type'      => 'radio-position',
+                'choices'   => array(
+                    'left top' => '',
+                    'center top' => '',
+                    'right top' => '',
+                    'left center' => '',
+                    'center center' => '',
+                    'right center' => '',
+                    'left bottom' => '',
+                    'center bottom' => '',
+                    'right bottom' => '',
+                ),
             ),
 
             'backgroundImage' => array(
@@ -70,7 +80,7 @@ class AlisiosAdminCustomizerBackground extends AlisiosAdminCustomizerTemplate {
             'custom_background_image',
             'repeat_custom_background_image_x',
             'repeat_custom_background_image_y',
-            'align_center_custom_background_image'
+            'align_custom_background_image'
         );
     }
 }

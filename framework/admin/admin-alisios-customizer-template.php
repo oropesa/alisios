@@ -126,9 +126,9 @@ class AlisiosAdminCustomizerTemplate {
                 case 'image' :
                     $wp_customize->add_control(
                         new WP_Customize_Image_Control($wp_customize, $field['id'], array(
-                            'label'          => $field['label'],
-                            'section'        => $field['section'],
-                            'settings'       => $entireID
+                            'label'     => $field['label'],
+                            'section'   => $field['section'],
+                            'settings'  => $entireID
                         ))
                     );
                     break;
@@ -140,6 +140,16 @@ class AlisiosAdminCustomizerTemplate {
                         'settings'   => $entireID,
                         'choices'    => $field['choices'],
                     ));
+                    break;
+                case 'radio-position' :
+                    $wp_customize->add_control(
+                        new Alisios_Customize_Radio_Position_Control($wp_customize, $field['id'], array(
+                            'label'     => $field['label'],
+                            'section'   => $field['section'],
+                            'settings'  => $entireID,
+                            'choices'   => $field['choices'],
+                        ))
+                    );
                     break;
                 case 'text' :
                     $wp_customize->add_control($entireID, array(
@@ -162,3 +172,43 @@ class AlisiosAdminCustomizerTemplate {
     }
 
 }
+
+/**
+ * Customize Control Class
+ *
+ * Type: Radio Position, 3x3 table
+ */
+if( class_exists ('WP_Customize_Control') ) :
+    class Alisios_Customize_Radio_Position_Control extends WP_Customize_Control {
+        public $type = 'radio-position';
+
+        public function render_content() {
+            if ( empty( $this->choices ) )
+                return;
+
+            $name = '_customize-radio-' . $this->id;
+
+            $i = 0;
+            ?>
+            <table>
+            <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+            <?php foreach ( $this->choices as $value => $label ) :
+                if($i % 3 == 0)
+                    echo '<tr>';
+                ?>
+                <td>
+                    <label>
+                        <input type="radio" value="<?php echo esc_attr( $value ); ?>" name="<?php echo esc_attr( $name ); ?>" <?php $this->link(); checked( $this->value(), $value ); ?> />
+                        <?php echo esc_html( $label ); ?><br/>
+                    </label>
+                </td>
+                <?php
+                if($i+1 % 3 == 0)
+                    echo '</tr>';
+                $i++;
+            endforeach; ?>
+            </table>
+            <?php
+        }
+    }
+endif;

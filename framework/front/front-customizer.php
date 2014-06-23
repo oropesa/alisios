@@ -66,7 +66,7 @@ class AlisiosFrontCustomizer {
             $extras = 'background-repeat: repeat-y;';
 
         if(!empty($align))
-            $extras .= 'background-position: center top;';
+            $extras .= 'background-position: ' . $align . ';';
 
         $return = sprintf('%s { %s:%s; %s }',
             $selector,
