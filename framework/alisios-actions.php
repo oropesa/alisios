@@ -50,3 +50,4 @@ if(is_admin() ) {
  * CUSTOMIZER
  */
 $AlisiosAdminCustomBackground   = new AlisiosAdminCustomizerBackground();
+$AlisiosAdminCustomHeader       = new AlisiosAdminCustomizerHeader();

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Alisios\n"
-"POT-Creation-Date: 2014-06-23 14:51-0000\n"
-"PO-Revision-Date: 2014-06-23 14:51-0000\n"
+"POT-Creation-Date: 2014-06-23 19:15-0000\n"
+"PO-Revision-Date: 2014-06-23 19:16-0000\n"
 "Last-Translator: Carlos Oropesa <carlos@oropensando.com>\n"
 "Language-Team: oropensando.com <carlos@oropensando.com>\n"
 "Language: es_ES\n"
@@ -64,7 +64,7 @@ msgid "Archives"
 msgstr "Entradas"
 
 #: ../framework/admin/admin-custombackground.php:10
-#: ../framework/admin/admin-custombackground.php:60
+#: ../framework/admin/admin-custombackground.php:26
 msgid "Background Image"
 msgstr "Imagen de Fondo"
 
@@ -72,17 +72,48 @@ msgstr "Imagen de Fondo"
 msgid "Background Color"
 msgstr "Color del Fondo"
 
-#: ../framework/admin/admin-custombackground.php:26
+#: ../framework/admin/admin-custombackground.php:34
+#: ../framework/admin/admin-customheader.php:34
 msgid "Repeat background horizontally?"
 msgstr "¿Repetir el fondo horizontalmente?"
 
-#: ../framework/admin/admin-custombackground.php:34
+#: ../framework/admin/admin-custombackground.php:42
+#: ../framework/admin/admin-customheader.php:42
 msgid "Repeat background vertically?"
 msgstr "¿Repetir el fondo verticalmente?"
 
-#: ../framework/admin/admin-custombackground.php:42
+#: ../framework/admin/admin-custombackground.php:50
+#: ../framework/admin/admin-customheader.php:66
 msgid "Position background image"
 msgstr "Posición de la imagen de fondo"
+
+#: ../framework/admin/admin-customheader.php:10
+msgid "Header Background"
+msgstr "Cabecera: Fondo"
+
+#: ../framework/admin/admin-customheader.php:15
+msgid "Header Brand"
+msgstr "Cabecera: Marca"
+
+#: ../framework/admin/admin-customheader.php:26
+msgid "Header Color"
+msgstr "Color de la cabecera"
+
+#: ../framework/admin/admin-customheader.php:50
+msgid "Zone of image: inside"
+msgstr "Zona de la imagen: interna"
+
+#: ../framework/admin/admin-customheader.php:58
+msgid "Zone of color: inside"
+msgstr "Zona de color: interna"
+
+#: ../framework/admin/admin-customheader.php:85
+msgid "Height of header"
+msgstr "Altura de la cabecera"
+
+#: ../framework/admin/admin-customheader.php:93
+msgid "Header Image"
+msgstr "Imagen de la cabecera"
 
 #: ../framework/admin/admin-seoconnection.php:14
 msgid "Webmaster Tools"
@@ -395,6 +426,3 @@ msgstr "Búsqueda&hellip;"
 #: ../searchform.php:8
 msgid "Search"
 msgstr "Búsqueda"
-
-#~ msgid "Center background?"
-#~ msgstr "¿Centrar Fondo?"
