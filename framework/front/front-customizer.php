@@ -49,9 +49,9 @@ class AlisiosFrontCustomizer {
      */
     public static function generate_css_background_image($selector,$mod_name,$mod_x='',$mod_y='',$mod_align='',$echo=true) {
         $return = '';
-        $mod = get_theme_mod($mod_name);
+        $mod = get_theme_mod($mod_name, '');
         if( empty($mod) )
-            $mod = $mod_name;
+            return;
 
         $repeatX    = get_theme_mod($mod_x);
         $repeatY    = get_theme_mod($mod_y);
