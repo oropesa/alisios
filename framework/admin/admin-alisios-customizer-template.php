@@ -6,6 +6,7 @@
  *
  * Functions to edit:
  *  - loadOptions()
+ *  - loadHooks()
  */
 
 class AlisiosAdminCustomizerTemplate {
@@ -19,7 +20,13 @@ class AlisiosAdminCustomizerTemplate {
     function __construct() {
         add_action('customize_register',        array(&$this, 'register_options')   );
         add_action('alisios_customizer_render', array(&$this, 'render')             );
+
+        $this->loadHooks();
     }
+
+    /* Add Hooks in __construct
+     */
+    public function loadHooks() {}
 
     /* Prepare CSS output
      */
