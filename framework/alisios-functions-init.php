@@ -39,13 +39,17 @@ require_once( ALISIOS_DIR_FRONT . '/front-sidebar.php'      );
 require_once( ALISIOS_DIR_FRONT . '/front-footer.php'       );
 require_once( ALISIOS_DIR_FRONT . '/front-social.php'       );
 require_once( ALISIOS_DIR_FRONT . '/front-wpadminbar.php'   );
+require_once( ALISIOS_DIR_FRONT . '/front-customizer.php'   );
 
 // ~~ LOAD ADMIN FUNCTIONS
-require_once( ALISIOS_DIR_ADMIN . '/admin-alisios-template.php' );
+require_once( ALISIOS_DIR_ADMIN . '/admin-alisios-class-template.php'       );
+require_once( ALISIOS_DIR_ADMIN . '/admin-alisios-customizer-template.php'  );
 
 require_once( ALISIOS_DIR_ADMIN . '/admin-social.php'           );
 require_once( ALISIOS_DIR_ADMIN . '/admin-seoconnection.php'    );
-require_once( ALISIOS_DIR_ADMIN . '/admin-wpadminbar.php'    );
+require_once( ALISIOS_DIR_ADMIN . '/admin-wpadminbar.php'       );
+
+require_once( ALISIOS_DIR_ADMIN . '/admin-custombackground.php' );
 
 // ~~ LOAD ACTIONS
 
