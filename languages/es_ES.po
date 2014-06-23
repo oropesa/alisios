@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Alisios\n"
-"POT-Creation-Date: 2014-06-20 16:01-0000\n"
-"PO-Revision-Date: 2014-06-20 16:01-0000\n"
+"POT-Creation-Date: 2014-06-23 13:33-0000\n"
+"PO-Revision-Date: 2014-06-23 13:34-0000\n"
 "Last-Translator: Carlos Oropesa <carlos@oropensando.com>\n"
 "Language-Team: oropensando.com <carlos@oropensando.com>\n"
 "Language: es_ES\n"
@@ -63,96 +63,117 @@ msgstr "Entradas del año: %s"
 msgid "Archives"
 msgstr "Entradas"
 
-#: ../framework/admin/class-seoconnection.php:14
+#: ../framework/admin/admin-custombackground.php:10
+#: ../framework/admin/admin-custombackground.php:50
+msgid "Background Image"
+msgstr "Imagen de Fondo"
+
+#: ../framework/admin/admin-custombackground.php:18
+msgid "Background Color"
+msgstr "Color del Fondo"
+
+#: ../framework/admin/admin-custombackground.php:26
+msgid "Repeat background horizontally?"
+msgstr "¿Repetir el fondo horizontalmente?"
+
+#: ../framework/admin/admin-custombackground.php:34
+msgid "Repeat background vertically?"
+msgstr "¿Repetir el fondo verticalmente?"
+
+#: ../framework/admin/admin-custombackground.php:42
+msgid "Center background?"
+msgstr "¿Centrar Fondo?"
+
+#: ../framework/admin/admin-seoconnection.php:14
 msgid "Webmaster Tools"
 msgstr "Herramientas Webmaster"
 
-#: ../framework/admin/class-seoconnection.php:22
+#: ../framework/admin/admin-seoconnection.php:22
 msgid "Google Analytics ID"
 msgstr "ID de Google Analytics"
 
-#: ../framework/admin/class-seoconnection.php:26
-#: ../framework/admin/class-seoconnection.php:38
-#: ../framework/admin/class-seoconnection.php:50
-#: ../framework/admin/class-seoconnection.php:62
-#: ../framework/admin/class-seoconnection.php:74
+#: ../framework/admin/admin-seoconnection.php:26
+#: ../framework/admin/admin-seoconnection.php:38
+#: ../framework/admin/admin-seoconnection.php:50
+#: ../framework/admin/admin-seoconnection.php:62
+#: ../framework/admin/admin-seoconnection.php:74
 msgid "Verify your site with "
 msgstr "Verifica tu sitio con "
 
-#: ../framework/admin/class-seoconnection.php:28
-#: ../framework/admin/class-seoconnection.php:40
+#: ../framework/admin/admin-seoconnection.php:28
+#: ../framework/admin/admin-seoconnection.php:40
 msgid "Google Webmaster ID is weird."
 msgstr "El ID de Google Webmaster es raro."
 
-#: ../framework/admin/class-seoconnection.php:33
+#: ../framework/admin/admin-seoconnection.php:33
 msgid "Google Webmaster Tools"
 msgstr "Herramientas de Google Webmaster"
 
-#: ../framework/admin/class-seoconnection.php:36
-#: ../framework/admin/class-seoconnection.php:48
-#: ../framework/admin/class-seoconnection.php:60
-#: ../framework/admin/class-seoconnection.php:72
+#: ../framework/admin/admin-seoconnection.php:36
+#: ../framework/admin/admin-seoconnection.php:48
+#: ../framework/admin/admin-seoconnection.php:60
+#: ../framework/admin/admin-seoconnection.php:72
 msgid "Example: "
 msgstr "Ejemplo: "
 
-#: ../framework/admin/class-seoconnection.php:45
+#: ../framework/admin/admin-seoconnection.php:45
 msgid "Bing Webmaster Center"
 msgstr "Centro de Bing Webmaster"
 
-#: ../framework/admin/class-seoconnection.php:52
+#: ../framework/admin/admin-seoconnection.php:52
 msgid "Bing Webmaster ID is weird."
 msgstr "El ID de bing Webmaster es raro."
 
-#: ../framework/admin/class-seoconnection.php:57
+#: ../framework/admin/admin-seoconnection.php:57
 msgid "Alexa Site Verification"
 msgstr "Verificación del sitio en Alexa"
 
-#: ../framework/admin/class-seoconnection.php:64
-#: ../framework/admin/class-seoconnection.php:76
+#: ../framework/admin/admin-seoconnection.php:64
+#: ../framework/admin/admin-seoconnection.php:76
 msgid "Pinterest Verification ID is weird."
 msgstr "El ID de verificación de Pinterest es raro."
 
-#: ../framework/admin/class-seoconnection.php:69
+#: ../framework/admin/admin-seoconnection.php:69
 msgid "Pinterest Site Verification"
 msgstr "Verificación del sitio en Pinterest"
 
-#: ../framework/admin/class-seoconnection.php:86
+#: ../framework/admin/admin-seoconnection.php:86
 msgid "Seo Connection"
 msgstr "Conección SEO"
 
-#: ../framework/admin/class-social.php:14
+#: ../framework/admin/admin-social.php:14
 msgid "Facebook"
 msgstr "Facebook"
 
-#: ../framework/admin/class-social.php:18
+#: ../framework/admin/admin-social.php:18
 msgid "Twitter"
 msgstr "Twitter"
 
-#: ../framework/admin/class-social.php:22
+#: ../framework/admin/admin-social.php:22
 msgid "Google+"
 msgstr "Google+"
 
-#: ../framework/admin/class-social.php:32
+#: ../framework/admin/admin-social.php:32
 msgid "Add Facebook meta data?"
 msgstr "¿Añadir metadatos de Facebook?"
 
-#: ../framework/admin/class-social.php:35
+#: ../framework/admin/admin-social.php:35
 msgid ""
 "Add Open Graph meta data to your site's <code>&lt;head&gt;</code> section."
 msgstr ""
 "Añade metadatos de Open Graph a la sección <code>&lt;head&gt;</code> de tu "
 "página. "
 
-#: ../framework/admin/class-social.php:37
+#: ../framework/admin/admin-social.php:37
 msgid "Open Graph Facebook Checkbox failed because of yes."
 msgstr "La casilla de validación de Open Graph de Facebook falló porque sí."
 
-#: ../framework/admin/class-social.php:42
+#: ../framework/admin/admin-social.php:42
 msgid "Facebook Page"
 msgstr "Página de Facebook"
 
-#: ../framework/admin/class-social.php:45
-#: ../framework/admin/class-social.php:67
+#: ../framework/admin/admin-social.php:45
+#: ../framework/admin/admin-social.php:67
 msgid ""
 "If you have a Facebook page for your business, add that URL here and link it "
 "on your Facebook page."
@@ -160,15 +181,15 @@ msgstr ""
 "Si tienes una página de Facebook para tu negocio, añade aquí la URL y se "
 "enlazará tu sitio a tu página de Facebook."
 
-#: ../framework/admin/class-social.php:48
+#: ../framework/admin/admin-social.php:48
 msgid "Facebook Publisher URL is weird."
 msgstr "La URL de la página de Facebook es rara."
 
-#: ../framework/admin/class-social.php:53
+#: ../framework/admin/admin-social.php:53
 msgid "Facebook Author Page"
 msgstr "Página de Facebook del autor"
 
-#: ../framework/admin/class-social.php:56
+#: ../framework/admin/admin-social.php:56
 msgid ""
 "If you have a Facebook profile, add that URL here and link it on your "
 "Facebook page's about page."
@@ -176,44 +197,44 @@ msgstr ""
 "Si tienes un perfil de Facebook, añade aquí la URL y se enlazará tu sitio a "
 "tu perfil de Facebook."
 
-#: ../framework/admin/class-social.php:59
+#: ../framework/admin/admin-social.php:59
 msgid "Facebook Author URL is weird."
 msgstr "La URL de la página de Facebook del autor es raro."
 
-#: ../framework/admin/class-social.php:64
+#: ../framework/admin/admin-social.php:64
 msgid "Facebook App ID"
 msgstr "Facebook App ID"
 
-#: ../framework/admin/class-social.php:70
+#: ../framework/admin/admin-social.php:70
 msgid "Facebook App ID is weird."
 msgstr "Facebook App ID es raro."
 
-#: ../framework/admin/class-social.php:75
+#: ../framework/admin/admin-social.php:75
 msgid "Default Open Graph Image URL"
 msgstr "URL de la imagen de Open Graph por defecto"
 
-#: ../framework/admin/class-social.php:78
+#: ../framework/admin/admin-social.php:78
 msgid ""
 "This image is used if the page being shared does not contain any images."
 msgstr ""
 "Esta imagen es usada si la página que se va a compartir no tiene ninguna "
 "imagen."
 
-#: ../framework/admin/class-social.php:81
+#: ../framework/admin/admin-social.php:81
 msgid "Open Graph Image URL is weird."
 msgstr "La URL de la imagen Open Graph es rara."
 
-#: ../framework/admin/class-social.php:88
+#: ../framework/admin/admin-social.php:88
 msgid "Add Twitter meta data?"
 msgstr "¿Añadir metadatos de Twitter?"
 
-#: ../framework/admin/class-social.php:91
+#: ../framework/admin/admin-social.php:91
 msgid "Add Twitter meta data to your site's <code>&lt;head&gt;</code> section."
 msgstr ""
 "Añade metadatos de Twitter a la sección <code>&lt;head&gt;</code> de tu "
 "página. "
 
-#: ../framework/admin/class-social.php:92
+#: ../framework/admin/admin-social.php:92
 msgid ""
 "Note that for the Twitter Cards to work, you have to check the box and then "
 "<a target=\"_blank\" href=\"https://dev.twitter.com/docs/cards/validation/"
@@ -223,51 +244,51 @@ msgstr ""
 "la casilla y luego <a target=\"_blank\" href=\"https://dev.twitter.com/docs/"
 "cards/validation/validator\">validar sus tarjetas de Twitter</a>."
 
-#: ../framework/admin/class-social.php:94
+#: ../framework/admin/admin-social.php:94
 msgid "Twitter Checkbox failed because of yes."
 msgstr "La casilla de validación de Twitter falló porque sí."
 
-#: ../framework/admin/class-social.php:99
+#: ../framework/admin/admin-social.php:99
 msgid "Site Twitter Username"
 msgstr "Cuenta de Twitter del sitio"
 
-#: ../framework/admin/class-social.php:107
-#: ../framework/admin/class-social.php:126
-#: ../framework/admin/class-social.php:149
+#: ../framework/admin/admin-social.php:107
+#: ../framework/admin/admin-social.php:126
+#: ../framework/admin/admin-social.php:149
 msgid "Google+ Publisher URL is weird."
 msgstr "La URL de la página de Google+ Publisher es rara."
 
-#: ../framework/admin/class-social.php:112
+#: ../framework/admin/admin-social.php:112
 msgid "The default card type to use"
 msgstr "Tipo de tarjeta por defecto"
 
-#: ../framework/admin/class-social.php:117
+#: ../framework/admin/admin-social.php:117
 msgid "Summary"
 msgstr "Summary"
 
-#: ../framework/admin/class-social.php:118
+#: ../framework/admin/admin-social.php:118
 msgid "Summary with Large Image"
 msgstr "Summary with Large Image"
 
-#: ../framework/admin/class-social.php:133
+#: ../framework/admin/admin-social.php:133
 msgid "Add Google+ meta data?"
 msgstr "¿Añadir metadatos de Google+?"
 
-#: ../framework/admin/class-social.php:136
+#: ../framework/admin/admin-social.php:136
 msgid "Add Schema meta data to your site's <code>&lt;head&gt;</code> section."
 msgstr ""
 "Añade metadatos de Schema a la sección <code>&lt;head&gt;</code> de tu "
 "página. "
 
-#: ../framework/admin/class-social.php:138
+#: ../framework/admin/admin-social.php:138
 msgid "Google+ Checkbox failed because of yes."
 msgstr "La casilla de validación de Google+ falló porque sí."
 
-#: ../framework/admin/class-social.php:143
+#: ../framework/admin/admin-social.php:143
 msgid "Google+ Publisher Page"
 msgstr "Página de Google+ Publisher"
 
-#: ../framework/admin/class-social.php:146
+#: ../framework/admin/admin-social.php:146
 msgid ""
 "If you have a Google+ page for your business, add that URL here and link it "
 "on your Google+ page's about page."
@@ -275,11 +296,11 @@ msgstr ""
 "Si tienes una página de Google+ para tu negocio, añade aquí la URL y se "
 "enlazará tu sitio con tu página de Google+."
 
-#: ../framework/admin/class-social.php:154
+#: ../framework/admin/admin-social.php:154
 msgid "Google+ Author Page"
 msgstr "Página de Google+ del autor"
 
-#: ../framework/admin/class-social.php:157
+#: ../framework/admin/admin-social.php:157
 msgid ""
 "If you have a Google+ profile, add that URL here and link it on your Google+ "
 "page's about page."
@@ -287,17 +308,31 @@ msgstr ""
 "Si tienes un perfil de Google+, añade aquí la URL y se enlazará tu sitio a "
 "tu perfil de Google+."
 
-#: ../framework/admin/class-social.php:160
+#: ../framework/admin/admin-social.php:160
 msgid "Google+ Author URL is weird."
 msgstr "La URL de la Página Google+ del autor es rara."
 
-#: ../framework/admin/class-social.php:171
+#: ../framework/admin/admin-social.php:171
 msgid "Alisios: Social"
 msgstr "Alisios: Social"
 
-#: ../framework/admin/class-social.php:171
+#: ../framework/admin/admin-social.php:171
 msgid "Social"
 msgstr "Social"
+
+#: ../framework/admin/admin-wpadminbar.php:17
+msgid "WP Admin Bar"
+msgstr "Barra de Administrador de WP"
+
+#: ../framework/admin/admin-wpadminbar.php:19
+msgid "Show the Admin Bar on the top of the website when you are logged."
+msgstr ""
+"Mostrar la Barra de Administrador en la parte de arriba de la página cuando "
+"estás logueado."
+
+#: ../framework/admin/admin-wpadminbar.php:21
+msgid "WP Admin Bar Checkbox failed because of yes."
+msgstr "La Barra de Administrador de WP ha fallado porque sí."
 
 #: ../framework/front/front-head.php:40
 msgid "Tag: "
