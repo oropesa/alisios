@@ -28,8 +28,8 @@ class AlisiosAdminClassTemplate {
     /* Call to Registers
      */
     function __construct() {
-        add_action('admin_init', array($this, 'register_options'));
-        add_action('admin_menu', array($this, 'register_admin_page'));
+        add_action('admin_init', array(&$this, 'register_options'));
+        add_action('admin_menu', array(&$this, 'register_admin_page'));
     }
 
     /* Define Options (Sections & Fields)
@@ -101,7 +101,7 @@ class AlisiosAdminClassTemplate {
     public function register_admin_page() {
         //if it is in the page itself, it loads styles and scripts
         if(isset($_GET['page']) && $_GET['page'] == $this->page_slug) {
-            add_action('admin_enqueue_scripts', array($this, 'admin_enqueue_style_and_script'));
+            add_action('admin_enqueue_scripts', array(&$this, 'admin_enqueue_style_and_script'));
         }
 
         $this->loadAdminPage();
@@ -188,7 +188,7 @@ class AlisiosAdminClassTemplate {
         register_setting(
             $this->opt_group,       // Option group
             $this->opt_name,        // Option name
-            array($this, 'sanitize')// Sanitize
+            array(&$this, 'sanitize')// Sanitize
         );
 
         foreach($this->sections as $section){
@@ -201,6 +201,9 @@ class AlisiosAdminClassTemplate {
         }
 
         foreach($this->fields as $field) {
+            //section control
+            $field['section'] = !empty($field['section']) ? $field['section'] : 'default';
+
             $args = array(
                 'type'      => $field['type'],
                 'var'       => $field['id'],
@@ -226,12 +229,12 @@ class AlisiosAdminClassTemplate {
             }
 
             add_settings_field(
-                $field['id'],                   // ID
-                $field['label'],                // Title
-                array( $this, 'fieldsToHtml' ), // Callback
-                $this->page_slug,               // Page
-                $field['section'],              // Section
-                $args                           // Arguments to Callback
+                $field['id'],                                                           // ID
+                '<label for="' . $field['id'] . '">' . $field['label'] . '</label>',    // Title
+                array( &$this, 'fieldsToHtml' ),                                         // Callback
+                $this->page_slug,                                                       // Page
+                $field['section'],                                                      // Section
+                $args                                                                   // Arguments to Callback
             );
         }
     }
