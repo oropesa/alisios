@@ -2,6 +2,120 @@
  * MIXINS
  */
 
+
+//transition default
+.transition() {
+  -webkit-transition: all ease .6s;
+  transition:         all ease .6s;
+}
+
+//animations
+.animation(@animation) {
+  -webkit-animation: @animation;
+  -moz-animation: @animation;
+  -o-animation: @animation;
+  animation: @animation;
+}
+
+.animation_none() {
+  -webkit-animation:  none;
+  -moz-animation:     none;
+  -o-animation:       none;
+  animation:          none;
+}
+
+//transforms
+.transform(@transform) {
+  -webkit-transform:  @transform;
+  -moz-transform:     @transform;
+  -ms-transform:      @transform;
+  transform:          @transform;
+}
+
+.transform_none() {
+  -webkit-transform:  none !important;
+  -moz-transform:     none !important;
+  -ms-transform:      none !important;
+  -o-transform:       none !important;
+  transform:          none !important;
+}
+
+.transform-origin(@origin: 0% 0%){
+  -webkit-transform-origin: @origin;
+  -moz-transform-origin:    @origin;
+  -ms-transform-origin:     @origin;
+  -o-transform-origin:      @origin;
+  transform-origin:         @origin;
+}
+
+.transform-style(@style: preserve-3d) {
+  -webkit-transform-style:  @style;
+  -moz-transform-style:     @style;
+  -ms-transform-style:      @style;
+  transform-style:          @style;
+}
+
+//translates
+.translateX(@translate: -.75em){
+  -webkit-transform:  translateX(@translate);
+  -moz-transform:     translateX(@translate);
+  -ms-transform:      translateX(@translate);
+  transform:          translateX(@translate);
+}
+
+.translateY(@translate: -.75em){
+  -webkit-transform:  translateY(@translate);
+  -moz-transform:     translateY(@translate);
+  -ms-transform:      translateY(@translate);
+  transform:          translateY(@translate);
+}
+
+.translateZ(@translate: -.75em){
+  -webkit-transform:  translateZ(@translate);
+  -moz-transform:     translateZ(@translate);
+  -ms-transform:      translateZ(@translate);
+  transform:          translateZ(@translate);
+}
+
+//scales
+.scale(@scale: 1.2) {
+  -webkit-transform:  scale(@scale);
+  -moz-transform:     scale(@scale);
+  -ms-transform:      scale(@scale);
+  transform:          scale(@scale);
+}
+
+//rotates
+.rotate(@rotate: 7deg) {
+  -webkit-transform:  rotate(@rotate);
+  -moz-transform:     rotate(@rotate);
+  -ms-transform:      rotate(@rotate);
+  transform:          rotate(@rotate);
+}
+
+//backfaces
+.backface(@backface: hidden){
+  -webkit-backface-visibility:  @backface;
+  -ms-backface-visibility:      @backface;
+  -o-backface-visibility:       @backface;
+  //backface-visibility:        @backface; Firefox doesn't like this.
+}
+
+//perspectives
+.perspective(@perspective: 300px) {
+  -webkit-perspective:  @perspective;
+  -moz-perspective:     @perspective;
+  -ms-perspective:      @perspective;
+  perspective:          @perspective;
+}
+
+.perspective-origin(@origin: 50% 50%) {
+  -webkit-perspective-origin: @origin;
+  -moz-perspective-origin:    @origin;
+  -ms-perspective-origin:     @origin;
+  perspective-origin:         @origin;
+}
+
 //border-radius
 .border-radius(@radius:.201em) {
   -webkit-border-radius:  @radius;
@@ -12,4 +126,22 @@
 .box-shadow(@shadow:0 0 0 .201em @gray) {
   -webkit-box-shadow: @shadow;
   box-shadow:         @shadow;
+}
+
+//word-wrap
+.word-wrap(@wrap:break-word){
+  -ms-word-wrap:  @wrap;
+  word-wrap:      @wrap;
+}
+
+//hide-text
+.hide-text(){
+  text-indent:  100%;
+  white-space:  nowrap;
+  overflow:     hidden;
+  display:      block;
+}
+
+.font-awesome() {
+  font-family: FontAwesome;
 }
