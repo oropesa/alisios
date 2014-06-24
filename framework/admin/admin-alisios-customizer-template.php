@@ -18,8 +18,9 @@ class AlisiosAdminCustomizerTemplate {
     /* Call to Registers
      */
     function __construct() {
-        add_action('customize_register',        array(&$this, 'register_options')   );
-        add_action('alisios_customizer_render', array(&$this, 'render')             );
+        add_action('customize_register',                array(&$this, 'register_options')           );
+        add_action('alisios_customizer_render',         array(&$this, 'render')                     );
+        add_action('customize_controls_print_styles',   array(&$this, 'customizer_enqueue_style')   );
 
         $this->loadHooks();
     }
@@ -90,6 +91,16 @@ class AlisiosAdminCustomizerTemplate {
         );
     }
 
+    public function customizer_enqueue_style() {
+        //less || css
+        if(ALISIOS_USE_LESS) {
+            wp_enqueue_style('alisios-style', ALISIOS_URL_LESS  . '/alisios-admin/alisios-admin.less');
+            wp_enqueue_script('alisios-less', ALISIOS_URL_JS_LIB . '/less.min.js');
+        } else {
+            wp_enqueue_style('alisios_admin_style', ALISIOS_URL_CSS . '/alisios-admin.css');
+        }
+    }
+
     /* Register and add settings
      */
     public function register_options($wp_customize) {
@@ -116,6 +127,7 @@ class AlisiosAdminCustomizerTemplate {
                     'capability'        => 'edit_theme_options',
                     'type'              => $settingType,
                     'default'           => apply_filters( 'alisios_' . $field['id'] . '_default', $field['default'] ),
+                    'chacho'            => 'tioo',
                 )
             );
 
@@ -166,9 +178,9 @@ class AlisiosAdminCustomizerTemplate {
                         'settings'   => $entireID,
                     ));
                     break;
-                case 'textinput' :
+                case 'textaddon-px' :
                     $wp_customize->add_control(
-                        new Alisios_Customize_Text_Control($wp_customize, $field['id'], array(
+                        new Alisios_Customize_Textpx_Control($wp_customize, $field['id'], array(
                         'label'      => $field['label'],
                         'section'    => $field['section'],
                         'type'       => $field['type'],
@@ -230,14 +242,14 @@ if( class_exists ('WP_Customize_Control') ) :
         }
     }
 
-    class Alisios_Customize_Text_Control extends WP_Customize_Control {
-        public $type = 'textinput';
+    class Alisios_Customize_Textpx_Control extends WP_Customize_Control {
+        public $type = 'textaddon-px';
 
         public function render_content() {
             ?>
             <label>
                 <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-                <input type="text" placeholder="<?php echo $this->settings['default']->default ?>" value="<?php echo esc_attr( $this->value() ); ?>" <?php $this->link(); ?> />
+                <input type="text" placeholder="<?php echo $this->settings['default']->default ?>" value="<?php echo esc_attr( $this->value() ); ?>" <?php $this->link(); ?> class="input-addon-right" /><span class="span-addon">px</span>
             </label>
             <?php
         }

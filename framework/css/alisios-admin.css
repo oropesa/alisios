@@ -76,3 +76,22 @@
   content: "\f462";
   color: #d34836;
 }
+/*
+ * Customizer
+ */
+#customize-theme-controls .control-section .customize-control .input-addon-right {
+  width: 88%;
+  border-right: 0;
+}
+#customize-theme-controls .control-section .customize-control .span-addon {
+  width: 9%;
+  border: 1px solid #dddddd;
+  background-color: #dddddd;
+  display: inline-block;
+  padding: 4px 2px 3px;
+}
+@media screen and (max-width: 782px) {
+  #customize-theme-controls .control-section .customize-control .span-addon {
+    padding: 9px 2px 7px;
+  }
+}
