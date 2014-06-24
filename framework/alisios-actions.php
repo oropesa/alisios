@@ -29,7 +29,8 @@ add_action('wp_head',              		array('AlisiosFrontCustomizer', 'render'));
 /*
  * HEADER
  */
-add_action('alisios_header_site_in',    array('AlisiosFrontHeader',     'site'));
+add_action('alisios_header_site_in',    array('AlisiosFrontHeader',             'site'), 20);
+add_action('alisios_header_site_in',    array('AlisiosAdminCustomizerHeader',   'brand'), 10);
 
 /*
  * FOOTER

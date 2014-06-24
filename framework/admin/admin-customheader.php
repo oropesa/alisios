@@ -67,15 +67,15 @@ class AlisiosAdminCustomizerHeader extends AlisiosAdminCustomizerTemplate {
                 'section'   => $this->sections['headerBackground']['id'],
                 'type'      => 'radio-position',
                 'choices'   => array(
-                    'left top' => '',
-                    'center top' => '',
-                    'right top' => '',
-                    'left center' => '',
+                    'left top'      => '',
+                    'center top'    => '',
+                    'right top'     => '',
+                    'left center'   => '',
                     'center center' => '',
-                    'right center' => '',
-                    'left bottom' => '',
+                    'right center'  => '',
+                    'left bottom'   => '',
                     'center bottom' => '',
-                    'right bottom' => '',
+                    'right bottom'  => '',
                 ),
                 'default' => 'center top'
             ),
@@ -84,7 +84,7 @@ class AlisiosAdminCustomizerHeader extends AlisiosAdminCustomizerTemplate {
                 'id'        => 'custom_header_height',
                 'label'     => __('Height of header', ALISIOS_I18N),
                 'section'   => $this->sections['headerBackground']['id'],
-                'type'      => 'textinput',
+                'type'      => 'textaddon-px',
                 'default'   => 'auto',
             ),
 
@@ -98,22 +98,72 @@ class AlisiosAdminCustomizerHeader extends AlisiosAdminCustomizerTemplate {
 
             //BRAND
 
-            /*'headerBrandSource' => array(
-                'id'        => 'header_brand_source',
+            'headerBrandSource' => array(
+                'id'        => 'source',
                 'label'     => __('Source', ALISIOS_I18N),
                 'section'   => $this->sections['headerBrand']['id'],
+                'option'    => 'alisios_header_brand',
                 'type'      => 'radio',
                 'choices'   => array(
-                    'none' => 'None',
-                    'gravatar' => 'Gravatar',
-                    'custom' => 'Uploaded image',
+                    'none'      => 'None',
+                    'gravatar'  => 'Gravatar',
+                    'custom'    => 'Uploaded image',
                 ),
                 'default' => 'none'
-            ),*/
+            ),
+
+            'headerBrandImage' => array(
+                'id'        => 'image',
+                'label'     => __('Brand Image', ALISIOS_I18N),
+                'section'   => $this->sections['headerBrand']['id'],
+                'option'    => 'alisios_header_brand',
+                'type'      => 'image',
+                'default'   => '',
+            ),
+
+            'headerBrandWidth' => array(
+                'id'        => 'width',
+                'label'     => __('Width of brand', ALISIOS_I18N),
+                'section'   => $this->sections['headerBrand']['id'],
+                'option'    => 'alisios_header_brand',
+                'type'      => 'textaddon-px',
+                'default'   => '128',
+            ),
+
+            'headerBrandFormat' => array(
+                'id'        => 'format',
+                'label'     => __('Format', ALISIOS_I18N),
+                'section'   => $this->sections['headerBrand']['id'],
+                'option'    => 'alisios_header_brand',
+                'type'      => 'radio',
+                'choices'   => array(
+                    'square'            => 'Square',
+                    'rounded'    => 'Rounded square',
+                    'circle'            => 'Circle',
+                ),
+                'default' => 'square'
+            ),
+
+            'headerBrandBordered' => array(
+                'id'        => 'bordered',
+                'label'     => __('Bordered', ALISIOS_I18N),
+                'section'   => $this->sections['headerBrand']['id'],
+                'option'    => 'alisios_header_brand',
+                'type'      => 'radio',
+                'choices'   => array(
+                    'none'      => 'None',
+                    'lighten'   => 'Lighten',
+                    'darken'    => 'Darken',
+                ),
+                'default' => 'none'
+            ),
         );
     }
 
     public function loadHooks() {
+
+        //BACKGROUND
+
         add_filter('alisios_header_color', function($selector) {
             $mod = get_theme_mod('custom_header_color_zone');
 
@@ -131,11 +181,18 @@ class AlisiosAdminCustomizerHeader extends AlisiosAdminCustomizerTemplate {
 
             return '.site';
         });
+
+        //BRAND
+
+
     }
 
     /* Prepare CSS output
      */
     public function render() {
+
+        //BACKGROUND
+
         AlisiosFrontCustomizer::generate_css(
             apply_filters( 'alisios_header_color', $selectors = '.header' ),
             'background-color',
@@ -151,9 +208,64 @@ class AlisiosAdminCustomizerHeader extends AlisiosAdminCustomizerTemplate {
         );
 
         AlisiosFrontCustomizer::generate_css(
-            apply_filters( 'alisios_header_color', $selectors = '.header' ),
+            apply_filters( 'alisios_header_height', $selectors = '.header' ),
             'height',
-            'custom_header_height'
+            'custom_header_height',
+            '',
+            'px'
         );
+
+        //BRAND
+
+        AlisiosFrontCustomizer::generate_css(
+            apply_filters( 'alisios_brand_width', $selectors = '.site-brand' ),
+            'width',
+            'alisios_header_brand[width]',
+            '',
+            'px'
+        );
+    }
+
+    public static function brand() {
+        $brandOptions = get_option( 'alisios_header_brand', array());
+
+        if(empty($brandOptions))
+            return;
+
+        if(isset($brandOptions['source']) && $brandOptions['source'] === 'none')
+            return;
+
+        $classes = '';
+
+        switch($brandOptions['format']) {
+            case 'circle':
+                $classes .= ' brand-circle';
+                break;
+            case 'rounded':
+                $classes .= ' brand-rounded';
+                break;
+        }
+
+        switch($brandOptions['bordered']) {
+            case 'lighten':
+                $classes .= ' brand-light-bordered';
+                break;
+            case 'darken':
+                $classes .= ' brand-dark-bordered';
+                break;
+        }
+
+        $output =  '<div class="site-brand' . $classes . '">' . '<a href="' . get_bloginfo( 'home' ) . '">';
+
+        if($brandOptions['source'] === 'gravatar')
+            $brand = get_avatar( apply_filters('alisios_header_gravatar_email', $email = esc_attr(get_option('admin_email'))), $brandOptions['width'], '', esc_attr( get_bloginfo( 'name' ) ) );
+        elseif($brandOptions['source'] === 'custom')
+            $brand = '<img src="' . $brandOptions['image'] . '" class="avatar avatar-custom photo" width="' . $brandOptions['width'] .  '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '">';
+        else
+            $brand = '';
+
+        $output .= $brand . '</a>' . '</div>';
+
+        echo $output;
     }
 }

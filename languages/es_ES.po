@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Alisios\n"
-"POT-Creation-Date: 2014-06-23 19:15-0000\n"
-"PO-Revision-Date: 2014-06-23 19:16-0000\n"
+"POT-Creation-Date: 2014-06-24 21:00-0000\n"
+"PO-Revision-Date: 2014-06-24 21:01-0000\n"
 "Last-Translator: Carlos Oropesa <carlos@oropensando.com>\n"
 "Language-Team: oropensando.com <carlos@oropensando.com>\n"
 "Language: es_ES\n"
@@ -114,6 +114,26 @@ msgstr "Altura de la cabecera"
 #: ../framework/admin/admin-customheader.php:93
 msgid "Header Image"
 msgstr "Imagen de la cabecera"
+
+#: ../framework/admin/admin-customheader.php:103
+msgid "Source"
+msgstr "Fuente"
+
+#: ../framework/admin/admin-customheader.php:117
+msgid "Brand Image"
+msgstr "Imagen de la marca"
+
+#: ../framework/admin/admin-customheader.php:126
+msgid "Width of brand"
+msgstr "Ancho de la marca"
+
+#: ../framework/admin/admin-customheader.php:135
+msgid "Format"
+msgstr "Formato"
+
+#: ../framework/admin/admin-customheader.php:149
+msgid "Bordered"
+msgstr "Bordeado"
 
 #: ../framework/admin/admin-seoconnection.php:14
 msgid "Webmaster Tools"

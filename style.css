@@ -1713,7 +1713,7 @@ output {
   padding-top: 7px;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #555555;
+  color: #dddddd;
 }
 .form-control {
   display: block;
@@ -1722,7 +1722,7 @@ output {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #555555;
+  color: #dddddd;
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #cccccc;
@@ -2825,7 +2825,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
-  color: #555555;
+  color: #dddddd;
   text-align: center;
   background-color: #eeeeee;
   border: 1px solid #cccccc;
@@ -2958,7 +2958,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #555555;
+  color: #dddddd;
   background-color: #ffffff;
   border: 1px solid #dddddd;
   border-bottom-color: transparent;
@@ -6780,4 +6780,19 @@ button.close {
 }
 .fa-plus-square-o:before {
   content: "\f196";
+}
+/*
+ * Alisios Admin
+ */
+/*
+ * Alisios Core
+ */
+.border-circle {
+  border-radius: 50%;
+}
+/*
+ * Alisios Header
+ */
+.site .site-brand a {
+  display: block;
 }
