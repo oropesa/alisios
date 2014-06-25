@@ -259,18 +259,25 @@ endif;
 
 /* Get data from DB between get_theme_mod or get_option
  * */
-function get_alisios_option($mod_name) {
-    // $mod_name = 'custom_color'; -> theme_mod
+function get_alisios_option($mod_name, $default = '') {
     // $mod_name = 'alisios_custom[color]'; -> option
+    // $mod_name = 'alisios_custom_color'; -> theme_mod || option
 
     if( ($pos = strpos($mod_name, '[')) !== false ) {
         //try in options
-        $opt = get_option( substr($mod_name, 0, $pos) );
-        $mod = $opt[ substr($mod_name, $pos+1, -1) ];
+        $opt = get_option(substr($mod_name, 0, $pos), 'non-in-option');
+        if($opt !== 'non-in-option')
+            $mod = $opt[ substr($mod_name, $pos+1, -1) ];
     } else {
         //try in theme_mod
-        $mod = get_theme_mod($mod_name);
+        $mod = get_theme_mod($mod_name, 'non-in-theme-mod');
+        //try in option
+        if($mod === 'non-in-theme-mod')
+            $mod = get_option($mod_name, 'non-in-option');
     }
+
+    if($mod === 'non-in-option')
+        $mod = $default;
 
     return $mod;
 }
