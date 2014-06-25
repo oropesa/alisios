@@ -29,12 +29,7 @@ class AlisiosFrontCustomizer {
     public static function generate_css($selector,$style,$mod_name,$prefix='',$postfix='',$echo=true) {
         $return = '';
         //try in theme_mod
-        $mod = get_theme_mod($mod_name);
-        //try in options
-        if( ($pos = strpos($mod_name, '[')) !== false ) {
-            $opt = get_option( substr($mod_name, 0, $pos) );
-            $mod = $opt[ substr($mod_name, $pos+1, -1) ];
-        }
+        $mod = get_alisios_option($mod_name);
 
         if( empty($mod) )
             $mod = $mod_name;
@@ -57,12 +52,7 @@ class AlisiosFrontCustomizer {
     public static function generate_css_background_image($selector,$mod_name,$mod_x='',$mod_y='',$mod_align='',$echo=true) {
         $return = '';
         //try in theme_mod
-        $mod = get_theme_mod($mod_name);
-        //try in options
-        if( ($pos = strpos($mod_name, '[')) !== false ) {
-            $opt = get_option( substr($mod_name, 0, $pos) );
-            $mod = $opt[ substr($mod_name, $pos+1, -1) ];
-        }
+        $mod = get_alisios_option($mod_name);
 
         if( empty($mod) )
             return;
