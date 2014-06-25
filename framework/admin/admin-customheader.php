@@ -7,17 +7,17 @@ class AlisiosAdminCustomizerHeader extends AlisiosAdminCustomizerTemplate {
         $this->sections = array(
             'headerBackground' => array(
                 'id'        => 'headerBackground',
-                'title'     => __('Header Background', ALISIOS_I18N),
+                'title'     => __('Header: Background', ALISIOS_I18N),
                 'priority'  => 50
             ),
             'headerBrand' => array(
                 'id'        => 'headerBrand',
-                'title'     => __('Header Brand', ALISIOS_I18N),
+                'title'     => __('Header: Brand', ALISIOS_I18N),
                 'priority'  => 51
             ),
             'headerFormat' => array(
                 'id'        => 'headerFormat',
-                'title'     => __('Header Format', ALISIOS_I18N),
+                'title'     => __('Header: Format', ALISIOS_I18N),
                 'priority'  => 52
             ),
         );
@@ -142,11 +142,11 @@ class AlisiosAdminCustomizerHeader extends AlisiosAdminCustomizerTemplate {
                 'option'    => 'alisios_header_site',
                 'type'      => 'radio',
                 'choices'   => array(
-                    'square'    => __('Square', ALISIOS_I18N),
-                    'rounded'   => __('Rounded square', ALISIOS_I18N),
-                    'circle'    => __('Circle', ALISIOS_I18N),
+                    'none'    => __('None', ALISIOS_I18N),
+                    'rounded' => __('Rounded', ALISIOS_I18N),
+                    'circle'  => __('Circle', ALISIOS_I18N),
                 ),
-                'default' => 'square'
+                'default' => 'none'
             ),
 
             'headerBrandBordered' => array(
