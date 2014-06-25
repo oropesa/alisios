@@ -256,3 +256,21 @@ if( class_exists ('WP_Customize_Control') ) :
     }
 
 endif;
+
+/* Get data from DB between get_theme_mod or get_option
+ * */
+function get_alisios_option($mod_name) {
+    // $mod_name = 'custom_color'; -> theme_mod
+    // $mod_name = 'alisios_custom[color]'; -> option
+
+    if( ($pos = strpos($mod_name, '[')) !== false ) {
+        //try in options
+        $opt = get_option( substr($mod_name, 0, $pos) );
+        $mod = $opt[ substr($mod_name, $pos+1, -1) ];
+    } else {
+        //try in theme_mod
+        $mod = get_theme_mod($mod_name);
+    }
+
+    return $mod;
+}
