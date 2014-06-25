@@ -5,9 +5,14 @@
 .site {
   .site-brand {
     margin: 1rem 0;
+    max-width: 100%;
 
     a {
       display: block;
+    }
+
+    img {
+      max-width: 100%;
     }
 
     &.brand-rounded {
@@ -32,6 +37,43 @@
       img {
         .box-shadow(0 0 0 1rem fade(@black, 10%));
       }
+    }
+  }
+
+  //formats
+  &.site-align-center {
+    text-align: center;
+    .site-brand {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &.site-align-left {
+    text-align: left;
+    .site-brand {
+      float: left;
+    }
+  }
+
+  &.site-align-left-right {
+    text-align: right;
+    .site-brand {
+      float: left;
+    }
+  }
+
+  &.site-align-right {
+    text-align: right;
+    .site-brand {
+      float: right;
+    }
+  }
+
+  &.site-align-right-left {
+    text-align: left;
+    .site-brand {
+      float: right;
     }
   }
 }
