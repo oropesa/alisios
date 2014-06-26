@@ -1,5 +1,15 @@
 # Alisios changelog
 
+## 26.06.2014 - 0.6.0
+* Refactoring and renaming several files
+* Add Admin Class Template
+* Add Admin Customizer Template
+* Add Social Connection Options in Tools Panel & in *head*
+* Can hide WP Admin Bar from website in General Settings Panel
+* Add Background Customizer (BG Color, BG Image)
+* Add Header Customizer (BG Color, BG Image, Brand, Color, Format)
+
+
 ## 02.06.2014 - 0.5.0
 * Add modernizr.js, but not implement
 * Add doctype and basic metatags in head
