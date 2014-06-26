@@ -7,49 +7,59 @@ class AlisiosAdminCustomizerBackground extends AlisiosAdminCustomizerTemplate {
         $this->sections = array(
             'customBackground' => array(
                 'id'        => 'customBackground',
-                'title'     => __('Background Image', ALISIOS_I18N),
+                'title'     => __('Background: Image', ALISIOS_I18N),
                 'priority'  => 40
             )
         );
 
         $this->fields = array(
+
+            //COLORS
+
             'backgroundColor' => array(
-                'id'        => 'custom_background_color',
+                'id'        => 'background-color',
                 'label'     => __('Background Color', ALISIOS_I18N),
                 'section'   => 'colors',
                 'type'      => 'color',
+                'option'    => 'alisios_background',
                 'default'   => '#fcfcfc',
             ),
 
-            'backgroundImage' => array(
-                'id'        => 'custom_background_image',
-                'label'     => __('Background Image', ALISIOS_I18N),
-                'section'   => $this->sections['customBackground']['id'],
-                'type'      => 'image',
-                'default'   => '',
-            ),
+            //BACKGROUND
 
             'repeatBackgroundX' => array(
-                'id'        => 'repeat_custom_background_image_x',
-                'label'     => __('Repeat background horizontally?', ALISIOS_I18N),
+                'id'        => 'background-image-repeat-x',
+                'label'     => __('Repeat background image horizontally', ALISIOS_I18N),
                 'section'   => $this->sections['customBackground']['id'],
                 'type'      => 'checkbox',
+                'option'    => 'alisios_background',
                 'default'   => 'on',
             ),
 
             'repeatBackgroundY' => array(
-                'id'        => 'repeat_custom_background_image_y',
-                'label'     => __('Repeat background vertically?', ALISIOS_I18N),
+                'id'        => 'background-image-repeat-y',
+                'label'     => __('Repeat background image vertically', ALISIOS_I18N),
                 'section'   => $this->sections['customBackground']['id'],
                 'type'      => 'checkbox',
+                'option'    => 'alisios_background',
                 'default'   => 'on',
             ),
 
+            'backgroundImage' => array(
+                'id'        => 'background-image',
+                'label'     => __('Background Image', ALISIOS_I18N),
+                'section'   => $this->sections['customBackground']['id'],
+                'type'      => 'image',
+                'option'    => 'alisios_background',
+                'default'   => '',
+            ),
+
             'centerBackground' => array(
-                'id'        => 'align_custom_background_image',
-                'label'     => __('Position background image', ALISIOS_I18N),
+                'id'        => 'background-image-align',
+                'label'     => __('Align of background image', ALISIOS_I18N),
                 'section'   => $this->sections['customBackground']['id'],
                 'type'      => 'radio-position',
+                'option'    => 'alisios_background',
                 'choices'   => array(
                     'left top' => '',
                     'center top' => '',
@@ -72,15 +82,15 @@ class AlisiosAdminCustomizerBackground extends AlisiosAdminCustomizerTemplate {
         AlisiosFrontCustomizer::generate_css(
             apply_filters( 'alisios_background_color', $selectors = 'body' ),
             'background-color',
-            'custom_background_color'
+            'alisios_background[background-color]'
         );
 
         AlisiosFrontCustomizer::generate_css_background_image(
             apply_filters( 'alisios_background_image', $selectors = 'body' ),
-            'custom_background_image',
-            'repeat_custom_background_image_x',
-            'repeat_custom_background_image_y',
-            'align_custom_background_image'
+            'alisios_background[background-image]',
+            'alisios_background[background-image-repeat-x]',
+            'alisios_background[background-image-repeat-y]',
+            'alisios_background[background-image-align]'
         );
     }
 }
