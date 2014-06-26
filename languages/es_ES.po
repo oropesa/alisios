@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Alisios\n"
-"POT-Creation-Date: 2014-06-25 13:53-0000\n"
-"PO-Revision-Date: 2014-06-25 13:54-0000\n"
+"POT-Creation-Date: 2014-06-26 11:07-0000\n"
+"PO-Revision-Date: 2014-06-26 11:07-0000\n"
 "Last-Translator: Carlos Oropesa <carlos@oropensando.com>\n"
 "Language-Team: oropensando.com <carlos@oropensando.com>\n"
 "Language: es_ES\n"
@@ -64,28 +64,32 @@ msgid "Archives"
 msgstr "Entradas"
 
 #: ../framework/admin/admin-custombackground.php:10
-#: ../framework/admin/admin-custombackground.php:26
-msgid "Background Image"
-msgstr "Imagen de Fondo"
+msgid "Background: Image"
+msgstr "Fondo: Imagen"
 
-#: ../framework/admin/admin-custombackground.php:18
+#: ../framework/admin/admin-custombackground.php:21
 msgid "Background Color"
 msgstr "Color del Fondo"
 
-#: ../framework/admin/admin-custombackground.php:34
-#: ../framework/admin/admin-customheader.php:39
-msgid "Repeat background horizontally?"
-msgstr "¿Repetir el fondo horizontalmente?"
+#: ../framework/admin/admin-custombackground.php:32
+#: ../framework/admin/admin-customheader.php:60
+msgid "Repeat background image horizontally"
+msgstr "Repetir la imagen horizontalmente"
 
-#: ../framework/admin/admin-custombackground.php:42
-#: ../framework/admin/admin-customheader.php:47
-msgid "Repeat background vertically?"
-msgstr "¿Repetir el fondo verticalmente?"
+#: ../framework/admin/admin-custombackground.php:41
+#: ../framework/admin/admin-customheader.php:69
+msgid "Repeat background image vertically"
+msgstr "Repetir la imagen verticalmente"
 
 #: ../framework/admin/admin-custombackground.php:50
-#: ../framework/admin/admin-customheader.php:71
-msgid "Position background image"
-msgstr "Posición de la imagen de fondo"
+#: ../framework/admin/admin-customheader.php:96
+msgid "Background Image"
+msgstr "Imagen de Fondo"
+
+#: ../framework/admin/admin-custombackground.php:59
+#: ../framework/admin/admin-customheader.php:105
+msgid "Align of background image"
+msgstr "Alineamiento de la imagen de fondo"
 
 #: ../framework/admin/admin-customheader.php:10
 msgid "Header: Background"
@@ -103,92 +107,115 @@ msgstr "Cabecera: Formato"
 msgid "Header Color"
 msgstr "Color de la cabecera"
 
-#: ../framework/admin/admin-customheader.php:55
+#: ../framework/admin/admin-customheader.php:40
+msgid "Header Title Color"
+msgstr "Color del título de la cabecera"
+
+#: ../framework/admin/admin-customheader.php:49
+msgid "Header Description Color"
+msgstr "Color de la descripción de la cabecera"
+
+#: ../framework/admin/admin-customheader.php:78
 msgid "Zone of image: inside"
 msgstr "Zona de la imagen: interna"
 
-#: ../framework/admin/admin-customheader.php:63
+#: ../framework/admin/admin-customheader.php:87
 msgid "Zone of color: inside"
 msgstr "Zona de color: interna"
 
-#: ../framework/admin/admin-customheader.php:90
-msgid "Height of header"
-msgstr "Altura de la cabecera"
-
-#: ../framework/admin/admin-customheader.php:98
-msgid "Header Image"
-msgstr "Imagen de la cabecera"
-
-#: ../framework/admin/admin-customheader.php:108
+#: ../framework/admin/admin-customheader.php:127
 msgid "Source"
 msgstr "Fuente"
 
-#: ../framework/admin/admin-customheader.php:113
-#: ../framework/admin/admin-customheader.php:145
-#: ../framework/admin/admin-customheader.php:159
+#: ../framework/admin/admin-customheader.php:132
+#: ../framework/admin/admin-customheader.php:164
+#: ../framework/admin/admin-customheader.php:178
 msgid "None"
 msgstr "Ninguno"
 
-#: ../framework/admin/admin-customheader.php:114
+#: ../framework/admin/admin-customheader.php:133
 msgid "Gravatar"
 msgstr "Gravatar"
 
-#: ../framework/admin/admin-customheader.php:115
+#: ../framework/admin/admin-customheader.php:134
 msgid "Uploaded image"
 msgstr "Imagen subida"
 
-#: ../framework/admin/admin-customheader.php:122
+#: ../framework/admin/admin-customheader.php:141
 msgid "Brand Image"
 msgstr "Imagen de la marca"
 
-#: ../framework/admin/admin-customheader.php:131
+#: ../framework/admin/admin-customheader.php:150
 msgid "Width of brand"
 msgstr "Ancho de la marca"
 
-#: ../framework/admin/admin-customheader.php:140
-#: ../framework/admin/admin-customheader.php:170
+#: ../framework/admin/admin-customheader.php:159
 msgid "Format"
 msgstr "Formato"
 
-#: ../framework/admin/admin-customheader.php:146
+#: ../framework/admin/admin-customheader.php:165
 msgid "Rounded"
 msgstr "Redondeado"
 
-#: ../framework/admin/admin-customheader.php:147
+#: ../framework/admin/admin-customheader.php:166
 msgid "Circle"
 msgstr "Círculo"
 
-#: ../framework/admin/admin-customheader.php:154
+#: ../framework/admin/admin-customheader.php:173
 msgid "Bordered"
 msgstr "Bordeado"
 
-#: ../framework/admin/admin-customheader.php:160
+#: ../framework/admin/admin-customheader.php:179
 msgid "Lighten"
 msgstr "Aclarado"
 
-#: ../framework/admin/admin-customheader.php:161
+#: ../framework/admin/admin-customheader.php:180
 msgid "Darken"
 msgstr "Oscurecido"
 
-#: ../framework/admin/admin-customheader.php:175
+#: ../framework/admin/admin-customheader.php:189
+msgid "Hide header"
+msgstr "Ocultar cabecera"
+
+#: ../framework/admin/admin-customheader.php:198
+msgid "Hide header brand"
+msgstr "Ocultar la marcha"
+
+#: ../framework/admin/admin-customheader.php:207
+msgid "Hide header title"
+msgstr "Ocultar el título"
+
+#: ../framework/admin/admin-customheader.php:216
+msgid "Hide header description"
+msgstr "Ocutar la descripción"
+
+#: ../framework/admin/admin-customheader.php:225
+msgid "Align"
+msgstr "Alineamiento"
+
+#: ../framework/admin/admin-customheader.php:230
 msgid "Center"
 msgstr "Centrado"
 
-#: ../framework/admin/admin-customheader.php:176
+#: ../framework/admin/admin-customheader.php:231
 msgid "Left"
 msgstr "Izquierda"
 
-#: ../framework/admin/admin-customheader.php:177
+#: ../framework/admin/admin-customheader.php:232
 msgid "Left & Right"
 msgstr "Izquierda & Derecha"
 
-#: ../framework/admin/admin-customheader.php:178
+#: ../framework/admin/admin-customheader.php:233
 msgid "Right"
 msgstr "Derecha"
 
-#: ../framework/admin/admin-customheader.php:179
+#: ../framework/admin/admin-customheader.php:234
 msgid "Right & Left"
 msgstr "Derecha & Izquierda"
+
+#: ../framework/admin/admin-customheader.php:241
+msgid "Height of header"
+msgstr "Altura de la cabecera"
 
 #: ../framework/admin/admin-seoconnection.php:14
 msgid "Webmaster Tools"
@@ -501,6 +528,18 @@ msgstr "Búsqueda&hellip;"
 #: ../searchform.php:8
 msgid "Search"
 msgstr "Búsqueda"
+
+#~ msgid "Repeat background horizontally?"
+#~ msgstr "¿Repetir el fondo horizontalmente?"
+
+#~ msgid "Repeat background vertically?"
+#~ msgstr "¿Repetir el fondo verticalmente?"
+
+#~ msgid "Position background image"
+#~ msgstr "Posición de la imagen de fondo"
+
+#~ msgid "Header Image"
+#~ msgstr "Imagen de la cabecera"
 
 #~ msgid "Square"
 #~ msgstr "Cuadrado"
