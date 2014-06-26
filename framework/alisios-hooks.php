@@ -3,7 +3,7 @@
  * Alisios Hooks
  * Action hooks used in the Alisios theme.
  */
-include_once(ALISIOS_DIR_INC . '/tha-theme-hooks.php');
+require_once(ALISIOS_DIR_INC . '/tha-theme-hooks.php');
 
 class AlisiosHooks {
 
