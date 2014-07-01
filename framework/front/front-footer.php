@@ -7,7 +7,7 @@ class AlisiosFrontFooter {
      */
     public static function credits() {
         ?>
-        <div <?php footer_class('credits'); ?>>
+        <div <?php footer_class( apply_filters('alisios_add_footer_credits', 'footer-credits'), apply_filters('alisios_remove_footer_credits', '')); ?>>
             <p>&copy; 2013 <a href="<?php bloginfo('url'); ?>" title="Alisios">Alisios</a>.</p>
         </div>
         <?php
@@ -26,7 +26,7 @@ class AlisiosFrontFooter {
 
                 <?php AlisiosHooks::sidebar_footer_content_top(); ?>
 
-                <div <?php footer_class('footer-content'); ?>>
+                <div <?php footer_class( apply_filters('alisios_add_footer_widgets', 'footer-widgets'), apply_filters('alisios_remove_footer_widgets', '')); ?>>
                     <?php
                     if( is_active_sidebar('footer-sidebar-1')
                         || is_active_sidebar('footer-sidebar-2')
@@ -65,28 +65,20 @@ class AlisiosFrontFooter {
 /**
  * Display the classes for the sidebar element.
  */
-function footer_class( $class = '' ) {
+function footer_class($addClass = '', $removeClass = '') {
     // Separates classes with a single space, collates classes for body element
-    echo 'class="' . join(' ', get_footer_class( $class )) . '"';
+    echo 'class="' . join(' ', get_footer_class($addClass, $removeClass)) . '"';
 }
 
-function get_footer_class( $class = '' ) {
-    $classes = array();
+function get_footer_class($addClass = '', $removeClass = '') {
 
     $classes[] = 'footer-content';
     $classes[] = 'col-xs-12';
     $classes[] = 'col-sm-12';
 
-    if(!empty($class)) {
-        if(!is_array($class))
-            $class = preg_split('#\s+#', $class);
-        $classes = array_merge($classes, $class);
-    } else {
-        // Ensure that we always coerce class to being an array.
-        $class = array();
-    }
+    $classes = apply_filters('footer_class', $classes);
 
-    $classes = array_map( 'esc_attr', $classes );
+    $classes = array_alisios_class($classes, $addClass, $removeClass);
 
-    return apply_filters( 'footer_class', $classes, $class );
+    return $classes;
 }
