@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Alisios\n"
-"POT-Creation-Date: 2014-06-26 11:07-0000\n"
-"PO-Revision-Date: 2014-06-26 11:07-0000\n"
+"POT-Creation-Date: 2014-07-06 20:40-0000\n"
+"PO-Revision-Date: 2014-07-06 21:06-0000\n"
 "Last-Translator: Carlos Oropesa <carlos@oropensando.com>\n"
 "Language-Team: oropensando.com <carlos@oropensando.com>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.5\n"
+"X-Generator: Poedit 1.6.6\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e;_n\n"
@@ -82,11 +82,15 @@ msgid "Repeat background image vertically"
 msgstr "Repetir la imagen verticalmente"
 
 #: ../framework/admin/admin-custombackground.php:50
+msgid "Fixed image"
+msgstr "Imagen fija"
+
+#: ../framework/admin/admin-custombackground.php:59
 #: ../framework/admin/admin-customheader.php:96
 msgid "Background Image"
 msgstr "Imagen de Fondo"
 
-#: ../framework/admin/admin-custombackground.php:59
+#: ../framework/admin/admin-custombackground.php:68
 #: ../framework/admin/admin-customheader.php:105
 msgid "Align of background image"
 msgstr "Alineamiento de la imagen de fondo"
@@ -175,11 +179,11 @@ msgstr "Oscurecido"
 
 #: ../framework/admin/admin-customheader.php:189
 msgid "Hide header"
-msgstr "Ocultar cabecera"
+msgstr "Ocultar la cabecera"
 
 #: ../framework/admin/admin-customheader.php:198
 msgid "Hide header brand"
-msgstr "Ocultar la marcha"
+msgstr "Ocultar la marca"
 
 #: ../framework/admin/admin-customheader.php:207
 msgid "Hide header title"
@@ -484,6 +488,14 @@ msgstr "Página %s"
 msgid "Search results in "
 msgstr "Resultados de la búsqueda en "
 
+#: ../framework/front/front-nav.php:11
+msgid "Main menu"
+msgstr "Menú principal"
+
+#: ../framework/front/front-nav.php:13
+msgid "Footer menu"
+msgstr "Menú de pie de página"
+
 #: ../framework/front/front-sidebar.php:11
 msgid "Sidebar"
 msgstr "Barra lateral"
@@ -499,6 +511,93 @@ msgstr "Pie de página #2"
 #: ../framework/front/front-sidebar.php:39
 msgid "Footer #3"
 msgstr "Pie de página #3"
+
+#. translators: %s: title of menu item which is invalid
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:85
+#, php-format
+msgid "%s (Invalid)"
+msgstr "%s (Inválido)"
+
+#. translators: %s: title of menu item in draft status
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:89
+#, php-format
+msgid "%s (Pending)"
+msgstr "%s (Pendiente)"
+
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:102
+msgid "sub item"
+msgstr "sub elemento"
+
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:134
+msgid "Edit Menu Item"
+msgstr "Editar el Elemento del Menú"
+
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:143
+msgid "URL"
+msgstr "URL"
+
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:150
+msgid "Navigation Label"
+msgstr "Etiqueta de navegación"
+
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:156
+msgid "Title Attribute"
+msgstr "Atributos del título"
+
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:163
+msgid "Open link in a new window/tab"
+msgstr "Abrir enlace en una nueva ventana/pestaña"
+
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:169
+msgid "FontAwesome Icon"
+msgstr "Icono FontAwesome"
+
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:176
+msgid "CSS Classes (optional)"
+msgstr "Clases CSS (opcional)"
+
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:182
+msgid "Link Relationship (XFN)"
+msgstr "Relación con el enlace (XFN)"
+
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:188
+msgid "Description"
+msgstr "Descripción"
+
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:190
+msgid ""
+"The description will be displayed in the menu if the current theme supports "
+"it."
+msgstr "La descripción se mostrará en el menú si el tema actual lo soporta."
+
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:195
+msgid "Move"
+msgstr "Mover"
+
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:196
+msgid "Up one"
+msgstr "Uno hacia arriba"
+
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:197
+msgid "Down one"
+msgstr "Uno hacia abajo"
+
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:200
+msgid "To the top"
+msgstr "A la parte superior"
+
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:207
+#, php-format
+msgid "Original: %s"
+msgstr "Original: %s"
+
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:220
+msgid "Remove"
+msgstr "Eliminar"
+
+#: ../framework/includes/alisios-walker-nav-menu-edit.php:221
+msgid "Cancel"
+msgstr "Cancelar"
 
 #: ../loop-empty.php:19
 msgid "Nothing Found"
