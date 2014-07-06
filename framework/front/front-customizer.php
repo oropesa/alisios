@@ -57,9 +57,9 @@ class AlisiosFrontCustomizer {
         if( empty($mod) )
             return;
 
-        $repeatX    = get_theme_mod($mod_x);
-        $repeatY    = get_theme_mod($mod_y);
-        $align      = get_theme_mod($mod_align);
+        $repeatX    = get_alisios_option($mod_x);
+        $repeatY    = get_alisios_option($mod_y);
+        $align      = get_alisios_option($mod_align);
 
         $extras = 'background-repeat: no-repeat;';
         if(!empty($repeatX) && !empty($repeatY))

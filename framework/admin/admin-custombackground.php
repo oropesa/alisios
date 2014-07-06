@@ -45,6 +45,15 @@ class AlisiosAdminCustomizerBackground extends AlisiosAdminCustomizerTemplate {
                 'default'   => 'on',
             ),
 
+            'fixedBackground' => array(
+                'id'        => 'background-image-fixed',
+                'label'     => __('Fixed image', ALISIOS_I18N),
+                'section'   => $this->sections['customBackground']['id'],
+                'type'      => 'checkbox',
+                'option'    => 'alisios_background',
+                'default'   => '',
+            ),
+
             'backgroundImage' => array(
                 'id'        => 'background-image',
                 'label'     => __('Background Image', ALISIOS_I18N),
@@ -92,5 +101,16 @@ class AlisiosAdminCustomizerBackground extends AlisiosAdminCustomizerTemplate {
             'alisios_background[background-image-repeat-y]',
             'alisios_background[background-image-align]'
         );
+
+        $bgOptions = get_alisios_option('alisios_background', array());
+        if(empty($bgOptions))
+            return;
+
+        if(!empty($bgOptions['background-image']) && !empty($bgOptions['background-image-fixed']))
+            AlisiosFrontCustomizer::generate_css(
+                apply_filters( 'alisios_background_image_fixed', $selectors = 'body' ),
+                'background-attachment',
+                'fixed'
+            );
     }
 }
