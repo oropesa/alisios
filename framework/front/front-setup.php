@@ -32,3 +32,7 @@ function array_alisios_class($classes, $addClass, $removeClass) {
 
     return $classes;
 }
+
+function isset_get($array, $key, $default = null) {
+    return isset($array[$key]) ? $array[$key] : $default;
+}

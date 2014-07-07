@@ -401,12 +401,18 @@ class AlisiosAdminCustomizerHeader extends AlisiosAdminCustomizerTemplate {
         if(empty($siteOptions))
             return;
 
-        if(isset($siteOptions['header-brand-source']) && $siteOptions['header-brand-source'] === 'none')
+        $brandSource = isset_get($siteOptions, 'header-brand-source');
+        if($brandSource === 'none')
             return;
+
+        $brandFormat    = isset_get($siteOptions, 'header-brand-format');
+        $brandBordered  = isset_get($siteOptions, 'header-brand-bordered');
+        $brandWidth     = isset_get($siteOptions, 'header-brand-width');
+        $brandImage     = isset_get($siteOptions, 'header-brand-image');
 
         $classes = '';
 
-        switch($siteOptions['header-brand-format']) {
+        switch($brandFormat) {
             case 'circle':
                 $classes .= ' brand-circle';
                 break;
@@ -415,7 +421,7 @@ class AlisiosAdminCustomizerHeader extends AlisiosAdminCustomizerTemplate {
                 break;
         }
 
-        switch($siteOptions['header-brand-bordered']) {
+        switch($brandBordered) {
             case 'lighten':
                 $classes .= ' brand-light-bordered';
                 break;
@@ -426,10 +432,10 @@ class AlisiosAdminCustomizerHeader extends AlisiosAdminCustomizerTemplate {
 
         $output =  '<div class="site-brand' . $classes . '">' . '<a href="' . get_bloginfo( 'home' ) . '">';
 
-        if($siteOptions['header-brand-source'] === 'gravatar')
-            $brand = get_avatar( apply_filters('alisios_header_gravatar_email', $email = esc_attr(get_option('admin_email'))), $siteOptions['header-brand-width'], '', esc_attr( get_bloginfo( 'name' ) ) );
-        elseif($siteOptions['header-brand-source'] === 'custom' && !empty($siteOptions['header-brand-image']))
-            $brand = '<img src="' . $siteOptions['header-brand-image'] . '" class="avatar avatar-custom photo" width="' . $siteOptions['header-brand-width'] .  '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '">';
+        if($brandSource === 'gravatar')
+            $brand = get_avatar( apply_filters('alisios_header_gravatar_email', $email = esc_attr(get_option('admin_email'))), $brandWidth, '', esc_attr( get_bloginfo( 'name' ) ) );
+        elseif($brandSource === 'custom' && !empty($brandImage))
+            $brand = '<img src="' . $brandImage . '" class="avatar avatar-custom photo" width="' . $brandWidth .  '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '">';
         else
             $brand = '';
 

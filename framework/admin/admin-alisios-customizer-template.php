@@ -267,7 +267,7 @@ function get_alisios_option($mod_name, $default = '') {
         //try in options
         $opt = get_option(substr($mod_name, 0, $pos), 'non-in-option');
         if($opt !== 'non-in-option')
-            $mod = $opt[ substr($mod_name, $pos+1, -1) ];
+            $mod = isset_get( $opt, substr($mod_name, $pos+1, -1) );
     } else {
         //try in theme_mod
         $mod = get_theme_mod($mod_name, 'non-in-theme-mod');
