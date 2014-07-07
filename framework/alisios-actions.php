@@ -57,3 +57,4 @@ if(is_admin() ) {
  */
 $AlisiosAdminCustomBackground   = new AlisiosAdminCustomizerBackground();
 $AlisiosAdminCustomHeader       = new AlisiosAdminCustomizerHeader();
+$AlisiosAdminCustomFooter       = new AlisiosAdminCustomizerFooter();

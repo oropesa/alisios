@@ -52,6 +52,7 @@ require_once( ALISIOS_DIR_ADMIN . '/admin-wpadminbar.php'       );
 
 require_once( ALISIOS_DIR_ADMIN . '/admin-custombackground.php' );
 require_once( ALISIOS_DIR_ADMIN . '/admin-customheader.php' );
+require_once( ALISIOS_DIR_ADMIN . '/admin-customfooter.php' );
 
 // ~~ LOAD ACTIONS
 

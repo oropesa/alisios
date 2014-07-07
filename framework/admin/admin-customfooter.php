@@ -15,8 +15,8 @@ class AlisiosAdminCustomizerFooter extends AlisiosAdminCustomizerTemplate {
                 'title'     => __('Footer: Navigation', ALISIOS_I18N),
                 'priority'  => 61
             ),
-            'foooterFormat' => array(
-                'id'        => 'foooterFormat',
+            'footerFormat' => array(
+                'id'        => 'footerFormat',
                 'title'     => __('Footer: Format', ALISIOS_I18N),
                 'priority'  => 62
             ),
@@ -28,7 +28,7 @@ class AlisiosAdminCustomizerFooter extends AlisiosAdminCustomizerTemplate {
 
             'footerColor' => array(
                 'id'        => 'footer-background-color',
-                'label'     => __('Footer Color', ALISIOS_I18N),
+                'label'     => __('Footer Background Color', ALISIOS_I18N),
                 'section'   => 'colors',
                 'type'      => 'color',
                 'option'    => 'alisios_footer',
@@ -115,7 +115,7 @@ class AlisiosAdminCustomizerFooter extends AlisiosAdminCustomizerTemplate {
 
             //FORMAT
 
-            'footerHide' => array(
+            'footerHideAll' => array(
                 'id'        => 'footer-hide-all',
                 'label'     => __('Hide footer', ALISIOS_I18N),
                 'section'   => $this->sections['footerFormat']['id'],
@@ -124,7 +124,7 @@ class AlisiosAdminCustomizerFooter extends AlisiosAdminCustomizerTemplate {
                 'default'   => '',
             ),
 
-            'footerGHideCredits' => array(
+            'footerHideCredits' => array(
                 'id'        => 'footer-hide-credits',
                 'label'     => __('Hide footer credits', ALISIOS_I18N),
                 'section'   => $this->sections['footerFormat']['id'],
@@ -182,15 +182,6 @@ class AlisiosAdminCustomizerFooter extends AlisiosAdminCustomizerTemplate {
                     'align-center'      => __('Center', ALISIOS_I18N),
                 ),
                 'default' => 'align-center'
-            ),
-
-            'footerHeight' => array(
-                'id'        => 'footer-height',
-                'label'     => __('Height of footer', ALISIOS_I18N),
-                'section'   => $this->sections['footerFormat']['id'],
-                'type'      => 'textaddon-px',
-                'option'    => 'alisios_footer',
-                'default'   => 'auto',
             ),
 
             'footerWidgetsNumber' => array(
