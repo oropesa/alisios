@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Alisios\n"
-"POT-Creation-Date: 2014-07-06 20:40-0000\n"
-"PO-Revision-Date: 2014-07-06 21:06-0000\n"
-"Last-Translator: Carlos Oropesa <carlos@oropensando.com>\n"
+"POT-Creation-Date: 2014-07-08 14:10-0000\n"
+"PO-Revision-Date: 2014-07-08 14:10-0000\n"
+"Last-Translator: Carlos Oropesa <carlos.oropesa@ric-ulpgc.es>\n"
 "Language-Team: oropensando.com <carlos@oropensando.com>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
@@ -72,11 +72,13 @@ msgid "Background Color"
 msgstr "Color del Fondo"
 
 #: ../framework/admin/admin-custombackground.php:32
+#: ../framework/admin/admin-customfooter.php:60
 #: ../framework/admin/admin-customheader.php:60
 msgid "Repeat background image horizontally"
 msgstr "Repetir la imagen horizontalmente"
 
 #: ../framework/admin/admin-custombackground.php:41
+#: ../framework/admin/admin-customfooter.php:69
 #: ../framework/admin/admin-customheader.php:69
 msgid "Repeat background image vertically"
 msgstr "Repetir la imagen verticalmente"
@@ -86,14 +88,95 @@ msgid "Fixed image"
 msgstr "Imagen fija"
 
 #: ../framework/admin/admin-custombackground.php:59
+#: ../framework/admin/admin-customfooter.php:96
 #: ../framework/admin/admin-customheader.php:96
 msgid "Background Image"
 msgstr "Imagen de Fondo"
 
 #: ../framework/admin/admin-custombackground.php:68
+#: ../framework/admin/admin-customfooter.php:105
 #: ../framework/admin/admin-customheader.php:105
 msgid "Align of background image"
 msgstr "Alineamiento de la imagen de fondo"
+
+#: ../framework/admin/admin-customfooter.php:10
+msgid "Footer: Background"
+msgstr "Pie de Página: Fondo"
+
+#: ../framework/admin/admin-customfooter.php:15
+msgid "Footer: Navigation"
+msgstr "Pie de Página: Navegador"
+
+#: ../framework/admin/admin-customfooter.php:20
+msgid "Footer: Format"
+msgstr "Pie de Página: Formato"
+
+#: ../framework/admin/admin-customfooter.php:31
+msgid "Footer Background Color"
+msgstr "Color del Fondo de Pie de Página"
+
+#: ../framework/admin/admin-customfooter.php:40
+msgid "Footer Text Color"
+msgstr "Color del texto de Pie de Página"
+
+#: ../framework/admin/admin-customfooter.php:49
+msgid "Footer Link Color"
+msgstr "Color de Enlaces de Pie de Página"
+
+#: ../framework/admin/admin-customfooter.php:78
+#: ../framework/admin/admin-customheader.php:78
+msgid "Zone of image: inside"
+msgstr "Zona de la imagen: interna"
+
+#: ../framework/admin/admin-customfooter.php:87
+#: ../framework/admin/admin-customheader.php:87
+msgid "Zone of color: inside"
+msgstr "Zona de color: interna"
+
+#: ../framework/admin/admin-customfooter.php:129
+msgid "Hide footer"
+msgstr "Ocultar el pie de página"
+
+#: ../framework/admin/admin-customfooter.php:138
+msgid "Hide footer credits"
+msgstr "Ocultar los créditos"
+
+#: ../framework/admin/admin-customfooter.php:147
+msgid "Credits text"
+msgstr "Texto de Créditos"
+
+#: ../framework/admin/admin-customfooter.php:156
+msgid "Credits Align"
+msgstr "Alineamiento de Créditos"
+
+#: ../framework/admin/admin-customfooter.php:161
+#: ../framework/admin/admin-customfooter.php:175
+#: ../framework/admin/admin-customfooter.php:189
+#: ../framework/admin/admin-customheader.php:231
+msgid "Left"
+msgstr "Izquierda"
+
+#: ../framework/admin/admin-customfooter.php:162
+#: ../framework/admin/admin-customfooter.php:176
+#: ../framework/admin/admin-customfooter.php:190
+#: ../framework/admin/admin-customheader.php:233
+msgid "Right"
+msgstr "Derecha"
+
+#: ../framework/admin/admin-customfooter.php:163
+#: ../framework/admin/admin-customfooter.php:177
+#: ../framework/admin/admin-customfooter.php:191
+#: ../framework/admin/admin-customheader.php:230
+msgid "Center"
+msgstr "Centrado"
+
+#: ../framework/admin/admin-customfooter.php:170
+msgid "Footer Menu Align"
+msgstr "Alineamiento del menú del pie de página"
+
+#: ../framework/admin/admin-customfooter.php:184
+msgid "Footer Menu Responsive Align"
+msgstr "Alineamiento del menú del pie de página en modo responsivo"
 
 #: ../framework/admin/admin-customheader.php:10
 msgid "Header: Background"
@@ -118,14 +201,6 @@ msgstr "Color del título de la cabecera"
 #: ../framework/admin/admin-customheader.php:49
 msgid "Header Description Color"
 msgstr "Color de la descripción de la cabecera"
-
-#: ../framework/admin/admin-customheader.php:78
-msgid "Zone of image: inside"
-msgstr "Zona de la imagen: interna"
-
-#: ../framework/admin/admin-customheader.php:87
-msgid "Zone of color: inside"
-msgstr "Zona de color: interna"
 
 #: ../framework/admin/admin-customheader.php:127
 msgid "Source"
@@ -197,21 +272,9 @@ msgstr "Ocutar la descripción"
 msgid "Align"
 msgstr "Alineamiento"
 
-#: ../framework/admin/admin-customheader.php:230
-msgid "Center"
-msgstr "Centrado"
-
-#: ../framework/admin/admin-customheader.php:231
-msgid "Left"
-msgstr "Izquierda"
-
 #: ../framework/admin/admin-customheader.php:232
 msgid "Left & Right"
 msgstr "Izquierda & Derecha"
-
-#: ../framework/admin/admin-customheader.php:233
-msgid "Right"
-msgstr "Derecha"
 
 #: ../framework/admin/admin-customheader.php:234
 msgid "Right & Left"

@@ -8,7 +8,22 @@ class AlisiosFrontFooter {
     public static function credits() {
         ?>
         <div <?php footer_class( apply_filters('alisios_add_footer_credits', 'footer-credits'), apply_filters('alisios_remove_footer_credits', '')); ?>>
-            <p>&copy; 2013 <a href="<?php bloginfo('url'); ?>" title="Alisios">Alisios</a>.</p>
+            <p><?php
+                $footerOptions = get_option('alisios_footer', array());
+                $creditsText = isset_get($footerOptions, 'footer-credits-text');
+
+                $patterns = array(
+                    "/%%site-url%%/",
+                    "/%%site-name%%/"
+                );
+
+                $replaces = array(
+                    get_bloginfo('home'),
+                    get_bloginfo('name')
+                );
+
+                echo preg_replace($patterns, $replaces, $creditsText);
+            ?></p>
         </div>
         <?php
     }

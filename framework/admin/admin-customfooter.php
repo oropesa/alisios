@@ -32,7 +32,7 @@ class AlisiosAdminCustomizerFooter extends AlisiosAdminCustomizerTemplate {
                 'section'   => 'colors',
                 'type'      => 'color',
                 'option'    => 'alisios_footer',
-                'default'   => '#EEEEEE',
+                'default'   => '#EDEDED',
             ),
 
             'textColor' => array(
@@ -41,7 +41,16 @@ class AlisiosAdminCustomizerFooter extends AlisiosAdminCustomizerTemplate {
                 'section'   => 'colors',
                 'type'      => 'color',
                 'option'    => 'alisios_footer',
-                'default'   => '#272727',
+                'default'   => '#061b2b',
+            ),
+
+            'linkColor' => array(
+                'id'        => 'footer-link-color',
+                'label'     => __('Footer Link Color', ALISIOS_I18N),
+                'section'   => 'colors',
+                'type'      => 'color',
+                'option'    => 'alisios_footer',
+                'default'   => '#1e73be',
             ),
 
             //BACKGROUND
@@ -137,9 +146,9 @@ class AlisiosAdminCustomizerFooter extends AlisiosAdminCustomizerTemplate {
                 'id'        => 'footer-credits-text',
                 'label'     => __('Credits text', ALISIOS_I18N),
                 'section'   => $this->sections['footerFormat']['id'],
-                'type'      => 'textinput',
+                'type'      => 'text',
                 'option'    => 'alisios_footer',
-                'default'   => '&copy; YYYY' . get_bloginfo('name'),
+                'default'   => '&copy; 2014 <a href="' . get_bloginfo('home') . '">' . get_bloginfo('name') . '</a>',
             ),
 
             'footerCreditsFormat' => array(
@@ -149,11 +158,11 @@ class AlisiosAdminCustomizerFooter extends AlisiosAdminCustomizerTemplate {
                 'option'    => 'alisios_footer',
                 'type'      => 'radio',
                 'choices'   => array(
-                    'align-left'        => __('Left', ALISIOS_I18N),
-                    'align-right'       => __('Right', ALISIOS_I18N),
-                    'align-center'      => __('Center', ALISIOS_I18N),
+                    'left'        => __('Left', ALISIOS_I18N),
+                    'right'       => __('Right', ALISIOS_I18N),
+                    'center'      => __('Center', ALISIOS_I18N),
                 ),
-                'default' => 'align-right'
+                'default' => 'right'
             ),
 
             'footerMenuFormat' => array(
@@ -163,11 +172,11 @@ class AlisiosAdminCustomizerFooter extends AlisiosAdminCustomizerTemplate {
                 'option'    => 'alisios_footer',
                 'type'      => 'radio',
                 'choices'   => array(
-                    'align-left'        => __('Left', ALISIOS_I18N),
-                    'align-right'       => __('Right', ALISIOS_I18N),
-                    'align-center'      => __('Center', ALISIOS_I18N),
+                    'left'        => __('Left', ALISIOS_I18N),
+                    'right'       => __('Right', ALISIOS_I18N),
+                    'center'      => __('Center', ALISIOS_I18N),
                 ),
-                'default' => 'align-left'
+                'default' => 'left'
             ),
 
             'footerMenuResponsiveFormat' => array(
@@ -177,30 +186,29 @@ class AlisiosAdminCustomizerFooter extends AlisiosAdminCustomizerTemplate {
                 'option'    => 'alisios_footer',
                 'type'      => 'radio',
                 'choices'   => array(
-                    'align-left'        => __('Left', ALISIOS_I18N),
-                    'align-right'       => __('Right', ALISIOS_I18N),
-                    'align-center'      => __('Center', ALISIOS_I18N),
+                    'left'        => __('Left', ALISIOS_I18N),
+                    'right'       => __('Right', ALISIOS_I18N),
+                    'center'      => __('Center', ALISIOS_I18N),
                 ),
-                'default' => 'align-center'
+                'default' => 'center'
             ),
 
-            'footerWidgetsNumber' => array(
+            /*'footerWidgetsNumber' => array(
                 'id'        => 'footer-widgets-number',
                 'label'     => __('Number of widgets? [0-4]', ALISIOS_I18N),
                 'section'   => $this->sections['footerFormat']['id'],
-                'type'      => 'textinput',
+                'type'      => 'text',
                 'option'    => 'alisios_footer',
                 'default'   => '3',
-            ),
+            ),*/
 
         );
     }
 
     public function loadHooks() {
 
-        //BACKGROUND
-
-        /*add_filter('alisios_site_background_color', function($selector) {
+/*
+        add_filter('alisios_site_background_color', function($selector) {
             $mod = get_alisios_option('alisios_header_site[header-background-color-zone]');
 
             if( empty($mod) )
@@ -239,43 +247,47 @@ class AlisiosAdminCustomizerFooter extends AlisiosAdminCustomizerTemplate {
     public function render() {
 
         //COLORS
-        /*AlisiosFrontCustomizer::generate_css(
-            apply_filters( 'alisios_site_background_color', $selectors = '.header' ),
+        AlisiosFrontCustomizer::generate_css(
+            apply_filters( 'alisios_footer_background_color', $selectors = '.footer' ),
             'background-color',
-            'alisios_header_site[header-background-color]'
+            'alisios_footer[footer-background-color]'
         );
 
         AlisiosFrontCustomizer::generate_css(
-            apply_filters( 'alisios_site_title_color', $selectors = '.site-header, .site-header a' ),
+            apply_filters( 'alisios_footer_text_color', $selectors = '.footer' ),
             'color',
-            'alisios_header_site[header-title-color]'
+            'alisios_footer[footer-text-color]'
         );
 
         AlisiosFrontCustomizer::generate_css(
-            apply_filters( 'alisios_site_title_color', $selectors = '.site-description' ),
+            apply_filters( 'alisios_footer_link_color', $selectors = '.footer a' ),
             'color',
-            'alisios_header_site[header-description-color]'
-        );*/
+            'alisios_footer[footer-link-color]'
+        );
 
         //BACKGROUND
 
-        /*AlisiosFrontCustomizer::generate_css_background_image(
-            apply_filters( 'alisios_site_background_image', $selectors = '.header' ),
-            'alisios_header_site[header-background-image]',
-            'alisios_header_site[header-background-image-repeat-x]',
-            'alisios_header_site[header-background-image-repeat-y]',
-            'alisios_header_site[header-background-image-align]'
+        AlisiosFrontCustomizer::generate_css_background_image(
+            apply_filters( 'alisios_footer_background_image', $selectors = '.footer' ),
+            'alisios_footer[footer-background-image]',
+            'alisios_footer[footer-background-image-repeat-x]',
+            'alisios_footer[footer-background-image-repeat-y]',
+            'alisios_footer[footer-background-image-align]'
+        );
+
+        //FORMAT
+
+        AlisiosFrontCustomizer::generate_css(
+            apply_filters( 'alisios_align_footer_credit', $selectors = '.footer-credits' ),
+            'text-align',
+            'alisios_footer[footer-credits-format]'
         );
 
         AlisiosFrontCustomizer::generate_css(
-            apply_filters( 'alisios_header_height', $selectors = '.header' ),
-            'height',
-            'alisios_header_site[header-height]',
-            '',
-            'px'
-        );*/
-
-        //BRAND
+            apply_filters( 'alisios_align_menu_responsive_format', $selectors = '.footer-nav' ),
+            'text-align',
+            'alisios_footer[footer-menu-responsive-format]'
+        );
 
         /*AlisiosFrontCustomizer::generate_css(
             apply_filters( 'alisios_brand_width', $selectors = '.site-brand' ),
@@ -343,5 +355,11 @@ class AlisiosAdminCustomizerFooter extends AlisiosAdminCustomizerTemplate {
 
     }
 
-
+    public function render_desktop() {
+        AlisiosFrontCustomizer::generate_css(
+            apply_filters( 'alisios_align_menu_format', $selectors = '.footer-nav' ),
+            'text-align',
+            'alisios_footer[footer-menu-format]'
+        );
+    }
 }
