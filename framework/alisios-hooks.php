@@ -342,6 +342,9 @@ class AlisiosHooks {
     public static function customizer_render() {
         do_action( 'alisios_customizer_render' );
     }
+    public static function customizer_desktop_render() {
+        do_action( 'alisios_customizer_desktop_render' );
+    }
 }
 
 /**

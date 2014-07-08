@@ -6,7 +6,11 @@ class AlisiosFrontCustomizer {
     public static function render() {
         ?>
         <!-- BEG Customizer CSS-->
-        <style type="text/css"><?php AlisiosHooks::customizer_render(); ?></style>
+        <style type="text/css">
+            <?php AlisiosHooks::customizer_render(); ?>
+
+            @media (min-width: 768px) { <?php AlisiosHooks::customizer_desktop_render(); ?> }
+        </style>
         <!-- END Customizer CSS-->
         <?php
     }

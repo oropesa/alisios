@@ -20,6 +20,7 @@ class AlisiosAdminCustomizerTemplate {
     function __construct() {
         add_action('customize_register',                array(&$this, 'register_options')           );
         add_action('alisios_customizer_render',         array(&$this, 'render')                     );
+        add_action('alisios_customizer_desktop_render', array(&$this, 'render_desktop')             );
         add_action('customize_controls_print_styles',   array(&$this, 'customizer_enqueue_style')   );
 
         $this->loadHooks();
@@ -32,6 +33,9 @@ class AlisiosAdminCustomizerTemplate {
     /* Prepare CSS output
      */
     public function render() {
+        /* See front-customizer */
+    }
+    public function render_desktop() {
         /* See front-customizer */
     }
 
