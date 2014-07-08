@@ -97,16 +97,14 @@ class AlisiosFrontNav {
     public static function footer_navigation() {
         ?>
 
-        <div <?php footer_class( apply_filters('alisios_add_footer_navigation', 'footer-nav'), apply_filters('alisios_remove_footer_navigation', '')); ?>>
-
-            <?php wp_nav_menu( array(
-                    'theme_location' => 'footer',
-                    'menu_class' => 'footer-menu',
-                    'walker' => new Alisios_Walker_Nav_Menu,
-                    'fallback_cb' => '' )
-            );?>
-
-        </div>
+        <div <?php footer_class( apply_filters('alisios_add_footer_navigation', 'footer-nav'), apply_filters('alisios_remove_footer_navigation', '')); ?>><?php
+            wp_nav_menu( array(
+                'theme_location' => 'footer',
+                'menu_class' => 'footer-menu',
+                'walker' => new Alisios_Walker_Nav_Menu,
+                'fallback_cb' => '' )
+            );
+        ?></div>
 
         <?php
     }
