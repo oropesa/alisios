@@ -292,7 +292,7 @@ class AlisiosAdminCustomizerHeader extends AlisiosAdminCustomizerTemplate {
 
         //COLORS
         AlisiosFrontCustomizer::generate_css(
-            apply_filters( 'alisios_site_background_color', $selectors = '.header' ),
+            apply_filters( 'alisios_site_background_color', $selectors = '.header, .alternative-nav' ),
             'background-color',
             'alisios_header_site[header-background-color]'
         );

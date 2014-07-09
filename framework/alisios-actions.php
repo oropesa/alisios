@@ -39,6 +39,8 @@ add_filter('wp_edit_nav_menu_walker',   array('AlisiosFrontNav', 'edit_nav_form_
 add_action('alisios_header_before',     array('AlisiosFrontNav', 'main_navigation_before'));
 add_action('alisios_header_after',      array('AlisiosFrontNav', 'main_navigation_after'));
 
+add_action('alisios_wrapper_before',    array('AlisiosFrontNav', 'alternative_menu'));
+
 /* FOOTER
  */
 add_action('alisios_footer_before',     array('AlisiosFrontFooter', 'widget'),              10);

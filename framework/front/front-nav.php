@@ -74,12 +74,34 @@ class AlisiosFrontNav {
         self::main_navigation();
     }
 
+    public static function alternative_menu() {
+        ?>
+        <div class="alternative-nav">
+            <ul class="buttons">
+                <li class="home"><a href="<?php bloginfo('home') ?>" class="nav-home button btn-alisios"><span>Inicio</span></a></li>
+                <li class="closed"><a href="#" class="nav-close button btn-alisios"><span>Volver al contenido</span></a></li>
+            </ul>
+            <hr>
+            <nav id="alt-navigation" role="navigation">
+
+                <h2><?php echo self::get_menu_name( 'main' ); ?></h2>
+                <?php wp_nav_menu( array(
+                        'theme_location' => 'main',
+                        'menu_class' => 'main-menu',
+                        'walker' => new Alisios_Walker_Nav_Menu,
+                        'fallback_cb' => '' )
+                ); ?>
+
+            </nav>
+        </div><!-- /.alternative-nav -->
+    <?php
+    }
+
     public static function main_navigation() {
         ?>
 
         <nav class="main-nav" id="navigation" role="navigation">
 
-            <h2><a href="#" class="btn-menu"><?php echo self::get_menu_name( 'main' ); ?></a></h2>
             <?php wp_nav_menu( array(
                     'theme_location' => 'main',
                     'menu_class' => 'main-menu',
