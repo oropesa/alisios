@@ -26,7 +26,7 @@
 
     </div><!-- /.inner-wrap -->
 
-    <?php AlisiosHooks::wrapper_before(); ?>
+    <?php AlisiosHooks::wrapper_after(); ?>
 
 </div><!-- /.outer-wrap -->
 
